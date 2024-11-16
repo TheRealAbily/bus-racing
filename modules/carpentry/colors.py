@@ -9,52 +9,52 @@ colorama.init()
 # Style:
 def styles_c(style):
     if style == 'N':
-        style.NORMAL
+        return style.NORMAL
     elif style == 'D':
-        style.DIM
+        return style.DIM
     elif style == 'B':
-        style.BRIGHT
+        return style.BRIGHT
     else:
-        style.RESET_ALL
+        return style.RESET_ALL
 
 # Text color:
 def front_c(color):
     if color == 'B':
-        Fore.BLACK
+        return Fore.BLACK
     elif color == 'R':
-        Fore.RED
+        return Fore.RED
     elif color == 'G':
-        Fore.GREEN
+        return Fore.GREEN
     elif color == 'Y':
-        Fore.YELLOW
+        return Fore.YELLOW
     elif color == 'Bl':
-        Fore.BLUE
+        return Fore.BLUE
     elif color == 'M':
-        Fore.MAGENTA
+        return Fore.MAGENTA
     elif color == 'C':
-        Fore.CYAN
+        return Fore.CYAN
     elif color == 'W':
-        Fore.WHITE
+        return Fore.WHITE
     else:
-        Fore.RESET
+        return Fore.RESET
 
 # Background color:
 def back_c(color):
     if color == 'B':
-        Back.BLACK
+        return Back.BLACK
     elif color == 'R':
-        Back.RED
+        return Back.RED
     elif color == 'G':
-        Back.GREEN
+        return Back.GREEN
     elif color == 'Y':
-        Back.YELLOW
+        return Back.YELLOW
     elif color == 'Bl':
-        Back.BLUE
+        return Back.BLUE
     elif color == 'M':
-        Back.MAGENTA
+        return Back.MAGENTA
     elif color == 'C':
-        Back.CYAN
+        return Back.CYAN
     elif color == 'W':
-        Back.WHITE
+        return Back.WHITE
     else:
-        Back.RESET
+        return Back.RESET
