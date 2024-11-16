@@ -5,4 +5,4 @@ from modules.config import *
 
 def section_1():
     clear()
-    print(front_c('R') + 'Hola')
+    front_c('Y')

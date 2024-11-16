@@ -56,6 +56,9 @@ def line(symbol, count, **options):
     else:
         next_line = 1
     
+    # Switch:
+    switch = options.get('switch', 0)
+    
     # Check the count:
     if isinstance(count, int):
         count = 1 if count < 1 else count
@@ -67,6 +70,9 @@ def line(symbol, count, **options):
 
     # Show the line 2/2:
     if count > 1 and symbol_intr != '':
-        print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, ('\n' * next_line), end='', sep='')
+        if switch == True:
+            print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, ('\n' * next_line), end='', sep='')
+        else:
+            print((f'{symbol_intr}{symbol}') * (count - 1), symbol, symbol_end, ('\n' * next_line), end='', sep='')
     else:
         print(symbol * count, symbol_end, ('\n' * next_line), end='', sep='')
