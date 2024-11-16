@@ -35,6 +35,9 @@ def section_1():
     # print(back_c('B') + front_c('W') + 'X  X  X   X      X     X X   X   X  X   X    X    X  XX  X   X')
     # print(back_c('B') + front_c('W') + 'XXX    XXX    XXX      X  X  X   X   XXX   XXXXX  X   X   XXX ')
 
+    # Line text:
+    text(color(f='W', b='B', s='B') + '- Press <enter> to start -', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=WIDHT - (32 * 2), distance_1=-1, distance_2=-1, x=EDGE_X)
+
     # Spaces:
     for m in range(4):
         line(' ', WIDHT + EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=EDGE_X)
