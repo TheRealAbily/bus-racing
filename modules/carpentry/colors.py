@@ -6,9 +6,128 @@ from colorama import Fore, Back, Style
 # Initialize Colorama:
 colorama.init()
 
+# Colors (back and front), and styles:
+def color(**options):
+    # Front color:
+    front_color = options.get('f', 0)
+
+    # Back color:
+    back_color = options.get('b', 0)
+
+    # Style:
+    style = options.get('s', 0)
+
+    # Use like function:
+    function = options.get('ff', True)
+
+    # Apply the changes:
+
+    # Text:
+    if front_color != 0:
+        if function == True:
+            if front_color == 'B':
+                return Fore.BLACK
+            elif front_color == 'R':
+                return Fore.RED
+            elif front_color == 'G':
+                return Fore.GREEN
+            elif front_color == 'Y':
+                return Fore.YELLOW
+            elif front_color == 'Bl':
+                return Fore.BLUE
+            elif front_color == 'M':
+                return Fore.MAGENTA
+            elif front_color == 'C':
+                return Fore.CYAN
+            elif front_color == 'W':
+                return Fore.WHITE
+            else:
+                return Fore.RESET
+        else:
+            if front_color == 'B':
+                print(Fore.BLACK, end='')
+            elif front_color == 'R':
+                print(Fore.RED, end='')
+            elif front_color == 'G':
+                print(Fore.GREEN, end='')
+            elif front_color == 'Y':
+                print(Fore.YELLOW, end='')
+            elif front_color == 'Bl':
+                print(Fore.BLUE, end='')
+            elif front_color == 'M':
+                print(Fore.MAGENTA, end='')
+            elif front_color == 'C':
+                print(Fore.CYAN, end='')
+            elif front_color == 'W':
+                print(Fore.WHITE, end='')
+            else:
+                print(Fore.RESET, end='')
+    
+    # Background:
+    if back_color != 0:
+        if function == True:
+            if back_color == 'B':
+                return Back.BLACK
+            elif back_color == 'R':
+                return Back.RED
+            elif back_color == 'G':
+                return Back.GREEN
+            elif back_color == 'Y':
+                return Back.YELLOW
+            elif back_color == 'Bl':
+                return Back.BLUE
+            elif back_color == 'M':
+                return Back.MAGENTA
+            elif back_color == 'C':
+                return Back.CYAN
+            elif back_color == 'W':
+                return Back.WHITE
+            else:
+                return Back.RESET
+        else:
+            if back_color == 'B':
+                print(Back.BLACK, end='')
+            elif back_color == 'R':
+                print(Back.RED, end='')
+            elif back_color == 'G':
+                print(Back.GREEN, end='')
+            elif back_color == 'Y':
+                print(Back.YELLOW, end='')
+            elif back_color == 'Bl':
+                print(Back.BLUE, end='')
+            elif back_color == 'M':
+                print(Back.MAGENTA, end='')
+            elif back_color == 'C':
+                print(Back.CYAN, end='')
+            elif back_color == 'W':
+                print(Back.WHITE, end='')
+            else:
+                print(Back.RESET, end='')
+    
+    # Style:
+    if style != 0:
+        if function == True:
+            if style == 'N':
+                return style.NORMAL
+            elif style == 'D':
+                return style.DIM
+            elif style == 'B':
+                return style.BRIGHT
+            else:
+                return style.RESET_ALL
+        else:
+            if style == 'N':
+                print(style.NORMAL, end='')
+            elif style == 'D':
+                print(style.DIM, end='')
+            elif style == 'B':
+                print(style.BRIGHT, end='')
+            else:
+                print(style.RESET_ALL, end='')
+
 # Style:
-def styles_c(style, change=True):
-    if change == False:
+def styles_c(style, function=True):
+    if function == True:
         if style == 'N':
             return style.NORMAL
         elif style == 'D':
@@ -28,8 +147,8 @@ def styles_c(style, change=True):
             print(style.RESET_ALL, end='')
 
 # Text color:
-def front_c(color, change=True):
-    if change == False:
+def front_c(color, function=True):
+    if function == True:
         if color == 'B':
             return Fore.BLACK
         elif color == 'R':
@@ -69,8 +188,8 @@ def front_c(color, change=True):
             print(Fore.RESET, end='')
 
 # Background color:
-def back_c(color, change=True):
-    if change == False:
+def back_c(color, function=True):
+    if function == True:
         if color == 'B':
             return Back.BLACK
         elif color == 'R':

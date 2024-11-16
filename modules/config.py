@@ -1,8 +1,8 @@
 # Variable initialization:
 
 # General:
-EDGE_X = 0
-EDGE_Y = 0
+EDGE_X = 4
+EDGE_Y = 2
 SECTION = 0
 LOOP = True
 WIDHT = 100

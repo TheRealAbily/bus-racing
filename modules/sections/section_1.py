@@ -4,14 +4,48 @@ from modules.carpentry import *
 from modules.config import *
 
 # Variables:
-black = (back_c('B', change=False) + front_c('', change=False) + '  ')
-white = (back_c('W', change=False) + front_c('', change=False) + '  ')
-edge = (back_c('', change=False) + front_c('Y', change=False) + '|')
+black = (color(b='B') + '  ')
+white = (color(b='W') + '  ')
+edge = (front_c('Y') + back_c('B') + '|')
 
 # Main menu:
 def section_1():
+    # Clear the screen:
     clear()
-    front_c('Y')
+
+    # Banner top:
+    color(f='Y', b='B', ff=False)
     line('=', WIDHT + EXTRA_FIX, points='o', x=EDGE_X, y=EDGE_Y)
-    line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True)
-    line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True, switch=True)
+
+    for i in range(2):
+        line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True)
+        line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True, switch=True)
+
+    color(f='Y', b='B', ff=False)
+    line('=', WIDHT + EXTRA_FIX, points='o', x=EDGE_X)
+
+    # Spaces:
+    for m in range(4):
+        line(' ', WIDHT + EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=EDGE_X)
+    
+    # Text:
+    # print(back_c('B') + front_c('W') + 'XXX   X   X   XXX      XXX    XXX    XXX   XXXXX  X   X   XXX ')
+    # print(back_c('B') + front_c('W') + 'X  X  X   X  X         X  X  X   X  X   X    X    XX  X  X    ')
+    # print(back_c('B') + front_c('W') + 'XXX   X   X   XXX      XXX   XXXXX  X        X    X X X  X  XX')
+    # print(back_c('B') + front_c('W') + 'X  X  X   X      X     X X   X   X  X   X    X    X  XX  X   X')
+    # print(back_c('B') + front_c('W') + 'XXX    XXX    XXX      X  X  X   X   XXX   XXXXX  X   X   XXX ')
+
+    # Spaces:
+    for m in range(4):
+        line(' ', WIDHT + EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=EDGE_X)
+
+    # Banner bottom:
+    color(f='Y', b='B', ff=False)
+    line('=', WIDHT + EXTRA_FIX, points='o', x=EDGE_X)
+
+    for c in range(2):
+        line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True)
+        line(black, floor(WIDHT / 2), intr=white, points=edge, x=EDGE_X, less=True, switch=True)
+
+    color(f='Y', b='B', ff=False)
+    line('=', WIDHT + EXTRA_FIX, points='o', x=EDGE_X)
