@@ -19,13 +19,13 @@ def styles_c(style, change=True):
             return style.RESET_ALL
     else:
         if style == 'N':
-            print(style.NORMAL, end = '')
+            print(style.NORMAL, end='')
         elif style == 'D':
-            print(style.DIM, end = '')
+            print(style.DIM, end='')
         elif style == 'B':
-            print(style.BRIGHT, end = '')
+            print(style.BRIGHT, end='')
         else:
-            print(style.RESET_ALL, end = '')
+            print(style.RESET_ALL, end='')
 
 # Text color:
 def front_c(color, change=True):
@@ -50,23 +50,23 @@ def front_c(color, change=True):
             return Fore.RESET
     else:
         if color == 'B':
-            print(Fore.BLACK, end = '')
+            print(Fore.BLACK, end='')
         elif color == 'R':
-            print(Fore.RED, end = '')
+            print(Fore.RED, end='')
         elif color == 'G':
-            print(Fore.GREEN, end = '')
+            print(Fore.GREEN, end='')
         elif color == 'Y':
-            print(Fore.YELLOW, end = '')
+            print(Fore.YELLOW, end='')
         elif color == 'Bl':
-            print(Fore.BLUE, end = '')
+            print(Fore.BLUE, end='')
         elif color == 'M':
-            print(Fore.MAGENTA, end = '')
+            print(Fore.MAGENTA, end='')
         elif color == 'C':
-            print(Fore.CYAN, end = '')
+            print(Fore.CYAN, end='')
         elif color == 'W':
-            print(Fore.WHITE, end = '')
+            print(Fore.WHITE, end='')
         else:
-            print(Fore.RESET, end = '')
+            print(Fore.RESET, end='')
 
 # Background color:
 def back_c(color, change=True):
@@ -91,20 +91,20 @@ def back_c(color, change=True):
             return Back.RESET
     else:
         if color == 'B':
-            print(Back.BLACK, end = '')
+            print(Back.BLACK, end='')
         elif color == 'R':
-            print(Back.RED, end = '')
+            print(Back.RED, end='')
         elif color == 'G':
-            print(Back.GREEN, end = '')
+            print(Back.GREEN, end='')
         elif color == 'Y':
-            print(Back.YELLOW, end = '')
+            print(Back.YELLOW, end='')
         elif color == 'Bl':
-            print(Back.BLUE, end = '')
+            print(Back.BLUE, end='')
         elif color == 'M':
-            print(Back.MAGENTA, end = '')
+            print(Back.MAGENTA, end='')
         elif color == 'C':
-            print(Back.CYAN, end = '')
+            print(Back.CYAN, end='')
         elif color == 'W':
-            print(Back.WHITE, end = '')
+            print(Back.WHITE, end='')
         else:
-            print(Back.RESET, end = '')
+            print(Back.RESET, end='')

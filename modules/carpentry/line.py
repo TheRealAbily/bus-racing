@@ -1,5 +1,7 @@
 # CMD decoration functions for the main program
 
+from math import floor
+
 def line(symbol, count, **options):
     # Start and end symbols:
     if 'points' in options:
@@ -41,7 +43,7 @@ def line(symbol, count, **options):
     
     # Next lines:
     if 'next' in options:
-        next_line = options.get('next', 1)
+        next_line = options.get('next', '\n')
 
         # Convert the variable to int:
         if not isinstance(next_line, int):
@@ -64,6 +66,11 @@ def line(symbol, count, **options):
         count = 1 if count < 1 else count
     else:
         count = 1
+    
+    # Less length:
+    less = options.get('less', False)
+
+    count = (count - floor(count / 2)) if less == True else count
 
     # Show the line 1/2:
     print(('\n' * edge_y), (' ' * edge_x), symbol_end, end='', sep='')
@@ -71,8 +78,8 @@ def line(symbol, count, **options):
     # Show the line 2/2:
     if count > 1 and symbol_intr != '':
         if switch == True:
-            print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, ('\n' * next_line), end='', sep='')
+            print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, end=('\n' * next_line), sep='')
         else:
-            print((f'{symbol_intr}{symbol}') * (count - 1), symbol, symbol_end, ('\n' * next_line), end='', sep='')
+            print((f'{symbol_intr}{symbol}') * (count - 1), symbol_intr, symbol_end, end=('\n' * next_line), sep='')
     else:
-        print(symbol * count, symbol_end, ('\n' * next_line), end='', sep='')
+        print(symbol * count, symbol_end, end=('\n' * next_line), sep='')
