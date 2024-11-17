@@ -19,6 +19,8 @@ import section_4 as s4
 import section_5 as s5
 import section_6 as s6
 import section_7 as s7
+import section_8 as s8
+import section_9 as s9
 
 # Start the program:
 while c.LOOP:
@@ -49,3 +51,11 @@ while c.LOOP:
     # Last page:
     if c.SECTION == 6:
         s7.section_7()
+
+    # Edit edge X:
+    if c.SECTION == 7:
+        s8.section_8()
+
+    # Edit edge Y:
+    if c.SECTION == 8:
+        s9.section_9()

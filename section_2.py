@@ -36,7 +36,7 @@ def section_2():
 
     # Banner middle:
     color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=c.EDGE_Y)
+    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=2)
 
     line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
     line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
@@ -70,7 +70,7 @@ def section_2():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 22)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 26)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -83,7 +83,11 @@ def section_2():
         if not 1 <= option <= 4:
             raise ValueError
         else:
+            # Selection:
             c.SECTION = (option + 1)
+
+            # SFX:
+            play_sfx('Go')
     
     except ValueError:
         option = ''

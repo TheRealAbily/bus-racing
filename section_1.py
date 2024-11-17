@@ -18,7 +18,7 @@ edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 17
 distance_right = 17
 
-# Main menu:
+# Presentation:
 def section_1():
     # Clear the screen:
     clear()
@@ -70,8 +70,13 @@ def section_1():
     pos(x=c.EDGE_X + 65, y=c.EDGE_Y + 16)
 
     # Play music:
-    start_play_music()
+    play_music('Main menu')
 
     # Pause the program:
     input()
+
+    # Section:
     c.SECTION = 1
+
+    # SFX:
+    play_sfx('Go')

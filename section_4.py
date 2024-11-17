@@ -19,7 +19,7 @@ distance_left = 17
 distance_right = 17
 
 # Main menu:
-def section_1():
+def section_4():
     # Clear the screen:
     clear()
 
