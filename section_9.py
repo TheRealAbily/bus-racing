@@ -48,9 +48,9 @@ def section_9():
     edge(y=2)
 
     # Text:
-    text(front_c('W') + styles_c('B') + '- Enter the new value of the Y axis ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )' + styles_c('N'), x=c.EDGE_X + 25, next=3)
+    text(front_c('W') + styles_c('B') + '- Enter the new value of the' + front_c('Y') + ' Y axis ' + front_c('W') + '( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )' + styles_c('N'), x=c.EDGE_X + 25, next=3)
 
-    print((' ' * (c.EDGE_X + 28)), front_c('Y') + styles_c('B') + '- New value (0 - 20): ' + styles_c('N') + front_c('W'), end='', sep='')
+    print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('B') + '- ' + front_c('G') + 'New value ' + front_c('W') + '( ' + front_c('C') + 'Min: ' + front_c('Y') + '0' + front_c('W') + ' - ' + front_c('C') + 'Max: ' + front_c('Y') + '20' + front_c('W') + ' ): ' + styles_c('N') + front_c('W'), end='', sep='')
     
     # Banner bottom:
     color(f='Y', b='B', ff=False)
@@ -63,7 +63,7 @@ def section_9():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 51, y=c.EDGE_Y + 17)
+    pos(x=c.EDGE_X + 63, y=c.EDGE_Y + 17)
 
     # Select the option:
     color(f='', b='', s='', ff=False)

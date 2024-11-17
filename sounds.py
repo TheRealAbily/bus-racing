@@ -85,3 +85,7 @@ def play_sfx(sfx):
 
     # Play:
     effect.play()
+
+# Change volume (Music):
+def volume():
+    pygame.mixer.music.set_volume(c.VOLUME_MUSIC)

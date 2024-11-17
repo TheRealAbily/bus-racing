@@ -21,6 +21,8 @@ import section_6 as s6
 import section_7 as s7
 import section_8 as s8
 import section_9 as s9
+import section_10 as s10
+import section_11 as s11
 
 # Start the program:
 while c.LOOP:
@@ -59,3 +61,11 @@ while c.LOOP:
     # Edit edge Y:
     if c.SECTION == 8:
         s9.section_9()
+
+    # Edit volume (Music):
+    if c.SECTION == 9:
+        s10.section_10()
+
+    # Edit volume (SFX):
+    if c.SECTION == 10:
+        s11.section_11()
