@@ -6,6 +6,7 @@ from line import *
 from move import *
 from screen import *
 from text import *
+from sounds import *
 
 # Config:
 import config as c
@@ -67,6 +68,9 @@ def section_1():
 
     # Move the cursor:
     pos(x=c.EDGE_X + 65, y=c.EDGE_Y + 16)
+
+    # Play music:
+    start_play_music()
 
     # Pause the program:
     input()

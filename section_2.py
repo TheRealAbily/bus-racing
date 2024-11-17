@@ -6,6 +6,7 @@ from line import *
 from move import *
 from screen import *
 from text import *
+from sounds import *
 
 # Config:
 import config as c
