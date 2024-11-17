@@ -42,5 +42,12 @@ def section_2():
     color(f='Y', b='B', ff=False)
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
+    # Edge Y:
+    edge(y=2)
+
+    # Text (options):
+    for r in range(4):
+        text(front_c('G') + f'{r + 1}.) ' + front_c('W') + styles_c('B') + 'Texto' + styles_c('N'), x=c.EDGE_X + 15, next=3)
+    
     # Pause the program:
     input()

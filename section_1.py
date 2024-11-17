@@ -49,7 +49,7 @@ def section_1():
         line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
     
     # Line text:
-    text(color(f='W', b='B', s='B') + '- Press ' + front_c('G') + '<enter>' + front_c('W') + ' to start -', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (32 * 2), distance_1=-1, distance_2=-1, x=c.EDGE_X)
+    text(color(f='W', b='B', s='B') + '- Press ' + front_c('G') + styles_c('B') + '<enter>' + styles_c('N') + front_c('W') + ' to start -', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (32 * 2), distance_1=-1, distance_2=-1, x=c.EDGE_X)
 
     # Spaces:
     line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)

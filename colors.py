@@ -15,7 +15,7 @@ def color(**options):
     back_color = options.get('b', 0)
 
     # Style:
-    style = options.get('s', 0)
+    select = options.get('s', 0)
 
     # Use like function:
     function = options.get('ff', True)
@@ -105,46 +105,46 @@ def color(**options):
                 print(Back.RESET, end='')
     
     # Style:
-    if style != 0:
+    if select != 0:
         if function == True:
-            if style == 'N':
-                return style.NORMAL
-            elif style == 'D':
-                return style.DIM
-            elif style == 'B':
-                return style.BRIGHT
+            if select == 'N':
+                return Style.NORMAL
+            elif select == 'D':
+                return Style.DIM
+            elif select == 'B':
+                return Style.BRIGHT
             else:
-                return style.RESET_ALL
+                return Style.RESET_ALL
         else:
-            if style == 'N':
-                print(style.NORMAL, end='')
-            elif style == 'D':
-                print(style.DIM, end='')
-            elif style == 'B':
-                print(style.BRIGHT, end='')
+            if select == 'N':
+                print(Style.NORMAL, end='')
+            elif select == 'D':
+                print(Style.DIM, end='')
+            elif select == 'B':
+                print(Style.BRIGHT, end='')
             else:
-                print(style.RESET_ALL, end='')
+                print(Style.RESET_ALL, end='')
 
 # Style:
-def styles_c(style, function=True):
+def styles_c(select, function=True):
     if function == True:
-        if style == 'N':
-            return style.NORMAL
-        elif style == 'D':
-            return style.DIM
-        elif style == 'B':
-            return style.BRIGHT
+        if select == 'N':
+            return Style.NORMAL
+        elif select == 'D':
+            return Style.DIM
+        elif select == 'B':
+            return Style.BRIGHT
         else:
-            return style.RESET_ALL
+            return Style.RESET_ALL
     else:
-        if style == 'N':
-            print(style.NORMAL, end='')
-        elif style == 'D':
-            print(style.DIM, end='')
-        elif style == 'B':
-            print(style.BRIGHT, end='')
+        if select == 'N':
+            print(Style.NORMAL, end='')
+        elif select == 'D':
+            print(Style.DIM, end='')
+        elif select == 'B':
+            print(Style.BRIGHT, end='')
         else:
-            print(style.RESET_ALL, end='')
+            print(Style.RESET_ALL, end='')
 
 # Text color:
 def front_c(color, function=True):
