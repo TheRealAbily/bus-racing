@@ -16,6 +16,7 @@ white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 19
 distance_right = 19
+option = ''
 
 # Main menu:
 def section_2():
@@ -45,9 +46,43 @@ def section_2():
     # Edge Y:
     edge(y=2)
 
+    # Text phrases:
+    text_phrase = ['Start the game ( ' + front_c('C') + 'Player' + front_c('Y') + ' vs. ' + front_c('G') + 'CPU' + front_c('W') + ' )',
+    'Start the game (' + front_c('Y') + ' 2 ' + front_c('C') + 'Player' + front_c('W') + ' )',
+    'Options',
+    'Exit of the game']
+
     # Text (options):
-    for r in range(4):
-        text(front_c('G') + f'{r + 1}.) ' + front_c('W') + styles_c('B') + 'Texto' + styles_c('N'), x=c.EDGE_X + 15, next=3)
+    for r in range(len(text_phrase)):
+        text(front_c('G') + f'{r + 1}.) ' + front_c('W') + styles_c('B') + text_phrase[r] + styles_c('N'), x=c.EDGE_X + 25, next=3)
+
+    print((' ' * (c.EDGE_X + 28)), front_c('Y') + styles_c('B') + '- Select the option: ' + styles_c('N') + front_c('W'), end='', sep='')
     
-    # Pause the program:
-    input()
+    # Banner bottom:
+    color(f='Y', b='B', ff=False)
+    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=3)
+
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
+
+    color(f='Y', b='B', ff=False)
+    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
+
+    # Move the cursor:
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 22)
+
+    # Select the option:
+    color(f='', b='', s='', ff=False)
+    option = input()
+
+    # Try converting the value to int (this worked first time):
+    try:
+        option = int(option)
+
+        if not 1 <= option <= 4:
+            raise ValueError
+        else:
+            c.SECTION = (option + 1)
+    
+    except ValueError:
+        option = ''
