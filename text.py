@@ -6,23 +6,27 @@ def edge(**edges):
         edge_y = edges.get('y', 0)
 
         if isinstance(edge_y, int):
-            if edge_y > 0:
-                edge_y = '\n' * edge_y
+            if edge_y < 0:
+                edge_y = 0
         else:
-            edge_y = ''
+            edge_y = 0
+    else:
+        edge_y = 0
         
     # Edge X:
     if 'x' in edges:
         edge_x = edges.get('x', 0)
-        
+
         if isinstance(edge_x, int):
-            if edge_x > 0:
-                edge_x = ' ' * edge_x
+            if edge_x < 0:
+                edge_x = 0
         else:
-            edge_x = ''
+            edge_x = 0
+    else:
+        edge_x = 0
     
     # Show the spaces:
-    print(edge_y, edge_x, end='', sep='')
+    print(('\n' * edge_y), (' ' * edge_x), end='', sep='')
 
 def text(text, **options):
     # Edge Y:
