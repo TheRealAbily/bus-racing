@@ -71,7 +71,7 @@ def section_5():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 17)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
 
     # Select the option:
     color(f='', b='', s='', ff=False)

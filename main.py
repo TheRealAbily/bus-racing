@@ -23,6 +23,7 @@ import section_8 as s8
 import section_9 as s9
 import section_10 as s10
 import section_11 as s11
+import section_12 as s12
 
 # Start the program:
 while c.LOOP:
@@ -69,3 +70,7 @@ while c.LOOP:
     # Edit volume (SFX):
     if c.SECTION == 10:
         s11.section_11()
+    
+    # Exit:
+    if c.SECTION == 11:
+        s12.section_12()

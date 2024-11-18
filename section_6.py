@@ -15,60 +15,84 @@ import config as c
 black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
-distance_left = 17
-distance_right = 17
+distance_left = 35
+distance_right = 20
+option = ''
 
-# Main menu:
+# Exit:
 def section_6():
     # Clear the screen:
     clear()
 
-    # Banner top:
-    color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=c.EDGE_Y)
+    # Edge Y:
+    edge(y=c.EDGE_Y) 
+    
+    # Title:
+    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + '     ' + back_c('B') + ' ' + (' ' * distance_right) + front_c('Y'))
+    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '       ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '     ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '   ' + (' ' * distance_right) + front_c('Y'))
+    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '   ' + (' ' * distance_right) + front_c('Y'))
+    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '       ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '     ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '   ' + (' ' * distance_right) + front_c('Y'))
+    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '     ' + back_c('B') + '    ' + back_c('W') + ' ' + back_c('B') + '   ' + (' ' * distance_right) + front_c('Y'))
 
-    for i in range(2):
-        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
-        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
+    # Banner middle:
+    color(f='Y', b='B', ff=False)
+    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=2)
+
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
 
     color(f='Y', b='B', ff=False)
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
-    # Spaces:
-    for m in range(2):
-        line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
+    # Edge Y:
+    edge(y=2)
+
+    # Text phrases:
+    text_phrase = ['Exit of the game', 'Return to the menu']
+
+    # Text (options):
+    for r in range(len(text_phrase)):
+        text(front_c('G') + f'{r + 1}.) ' + front_c('W') + styles_c('B') + text_phrase[r] + styles_c('N'), x=c.EDGE_X + 25, next=3)
+
+    print((' ' * (c.EDGE_X + 28)), front_c('Y') + styles_c('B') + '- Select the option: ' + styles_c('N') + front_c('W'), end='', sep='')
     
-    # Text:
-    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + '||' + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + ' ' + (' ' * distance_right) + front_c('Y') + '||')
-    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + '||' + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '         ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '    ' + (' ' * distance_right) + front_c('Y') + '||')
-    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + '||' + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + '    ' + back_c('B') + '  ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '  ' + back_c('B') + (' ' * distance_right) + front_c('Y') + '||')
-    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + '||' + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '     ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + (' ' * distance_right) + front_c('Y') + '||')
-    print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + '||' + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + ' ' + (' ' * distance_right) + front_c('Y') + '||')
-
-    # Spaces:
-    for n in range(2):
-        line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
-    
-    # Line text:
-    text(color(f='W', b='B', s='B') + '- Press ' + front_c('G') + styles_c('B') + '<enter>' + styles_c('N') + front_c('W') + ' to start -', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (32 * 2), distance_1=-1, distance_2=-1, x=c.EDGE_X)
-
-    # Spaces:
-    line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
-
     # Banner bottom:
     color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
+    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=3)
 
-    for k in range(2):
-        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
-        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
+    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
 
     color(f='Y', b='B', ff=False)
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 65, y=c.EDGE_Y + 16)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 20)
 
-    # Pause the program:
-    input()
-    c.SECTION = 1
+    # Select the option:
+    color(f='', b='', s='', ff=False)
+    option = input()
+
+    # Try converting the value to int (this worked first time):
+    try:
+        option = int(option)
+
+        if not 1 <= option <= 2:
+            raise ValueError
+        else:
+            # Exit of the game:
+            if option == 1:
+                # Variable:
+                c.SECTION = 11
+
+                # SFX:
+                play_sfx('Go')
+            else:
+                # Variable:
+                c.SECTION = 1
+
+                # SFX:
+                play_sfx('Back')
+    
+    except ValueError:
+        option = ''

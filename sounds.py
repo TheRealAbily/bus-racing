@@ -63,6 +63,11 @@ def play_music(music):
     # Play:
     pygame.mixer.music.play(-1)
 
+# Stop:
+def stop_music():
+    # Stop the music:
+    pygame.mixer.music.stop()
+
 # Close the window:
 def exit_window():
     pygame.quit()
@@ -89,3 +94,12 @@ def play_sfx(sfx):
 # Change volume (Music):
 def volume():
     pygame.mixer.music.set_volume(c.VOLUME_MUSIC)
+
+    # Change the image:
+    if c.VOLUME_MUSIC > 0:
+        screen.blit(image_sound_1, image_position)
+    else:
+        screen.blit(image_sound_2, image_position)
+
+    # Update the screen:
+    pygame.display.flip()
