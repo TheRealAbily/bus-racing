@@ -1,0 +1,23 @@
+Buseta Race
+Buseta Race es un juego de carreras por turnos desarrollado en Python, en el cual los jugadores controlan busetas que compiten para llegar a la meta antes que sus oponentes. El juego utiliza mecánicas sencillas y dinámicas para ofrecer una experiencia competitiva y divertida, ideal tanto para partidas en solitario contra la IA como para jugar con amigos.
+
+El objetivo del juego es cruzar la línea de meta antes que los demás, superando obstáculos, aprovechando bonificaciones y utilizando estrategias para avanzar más rápido. La jugabilidad se centra en turnos que combinan elementos de azar y decisiones estratégicas, lo que añade una capa de emoción e imprevisibilidad en cada carrera.
+
+El juego está diseñado para ser accesible y fácil de usar, con una interfaz básica que permite a los jugadores seleccionar sus busetas, personalizarlas y competir. Además, cuenta con un sistema de estadísticas al final de cada carrera que muestra los resultados, tiempos de los jugadores y posiciones finales.
+
+Características Principales
+Personalización: Los jugadores pueden elegir y personalizar sus busetas.
+Turnos dinámicos: Cada carrera avanza por turnos con elementos de azar y decisiones estratégicas.
+Obstáculos y bonificaciones: El recorrido incluye desafíos y oportunidades que pueden alterar el curso de la carrera.
+Competencia multijugador: Posibilidad de jugar contra amigos o una IA controlada por el juego.
+El proyecto está implementado en Python, facilitando la ejecución y modificaciones para futuros desarrollos o mejoras. Su estructura se centra en proporcionar un entorno sencillo y directo, ofreciendo una base sólida para explorar mecánicas de juegos por turnos y lógica de eventos aleatorios.
+
+Este enfoque mantiene un tono informativo y directo, proporcionando una descripción detallada de lo que ofrece el juego sin saludos ni elementos introductorios adicionales.
+
+Usa para recolectar todas las dependencias necesarias:
+
+pip freeze > requirements.txt
+
+Usa para instalar todas las dependencias necesarias:
+
+pip install -r requirements.txt
