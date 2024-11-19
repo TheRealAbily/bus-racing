@@ -21,7 +21,7 @@ distance_right = 19
 option = ''
 
 # Vehicles:
-vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster car', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
+vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
 # Selection of the vehicle (1 Player):
 def section_3():
@@ -57,8 +57,22 @@ def section_3():
     # Edge Y:
     edge(y=1)
     
+    # Variable:
+    distance = 26
+
     # Show the vehicle:
-    show_vehicle(c.VEHICLE_PLAYER_1, 30, x=c.EDGE_X)
+    if c.VEHICLE_PLAYER_1 == 0:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance + 5, x=c.EDGE_X)
+    elif c.VEHICLE_PLAYER_1 == 1:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance + 9, x=c.EDGE_X)
+    elif c.VEHICLE_PLAYER_1 == 2:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance, x=c.EDGE_X)
+    elif c.VEHICLE_PLAYER_1 == 3:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance + 9, x=c.EDGE_X)
+    elif c.VEHICLE_PLAYER_1 == 4:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance, x=c.EDGE_X)
+    else:
+        show_vehicle(c.VEHICLE_PLAYER_1, distance + 1, x=c.EDGE_X)
 
     # Edge Y:
     edge(y=2)
@@ -86,7 +100,7 @@ def section_3():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 30)
 
     # Select the option:
     color(f='', b='', s='', ff=False)

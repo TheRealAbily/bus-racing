@@ -22,7 +22,7 @@ distance_right = 19
 option = ''
 
 # Vehicles:
-vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster car', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
+vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
 # Selection of the vehicle (CPU):
 def section_13():
@@ -54,8 +54,22 @@ def section_13():
         # Edge Y:
         edge(y=1)
         
+        # Variable:
+        distance = 33
+
         # Show the vehicle:
-        show_vehicle(c.VEHICLE_PLAYER_CPU, 30, x=c.EDGE_X)
+        if c.VEHICLE_PLAYER_CPU == 0:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance + 5, False, x=c.EDGE_X)
+        elif c.VEHICLE_PLAYER_CPU == 1:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance + 9, False, x=c.EDGE_X)
+        elif c.VEHICLE_PLAYER_CPU == 2:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance, False, x=c.EDGE_X)
+        elif c.VEHICLE_PLAYER_CPU == 3:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance + 9, False, x=c.EDGE_X)
+        elif c.VEHICLE_PLAYER_CPU == 4:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance, False, x=c.EDGE_X)
+        else:
+            show_vehicle(c.VEHICLE_PLAYER_CPU, distance + 1, False, x=c.EDGE_X)
 
         # Edge Y:
         edge(y=2)
