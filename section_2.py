@@ -21,6 +21,11 @@ option = ''
 
 # Main menu:
 def section_2():
+    # Reset the variables:
+    c.VEHICLE_PLAYER_1 = 0
+    c.VEHICLE_PLAYER_2 = 0
+    c.VEHICLE_PLAYER_CPU = 0
+    
     # Clear the screen:
     clear()
 
