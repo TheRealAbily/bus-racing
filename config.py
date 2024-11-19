@@ -22,9 +22,10 @@ VEHICLE_PLAYER_CPU = 0
 MAX_VEHICLES = 6
 
 # Stats:
-STATS = [[3, 2, 5], # Car
-        [2, 2, 2], # Motorcycle
-        [3, 3, 3], # Bus
-        [4, 4, 4], # Go kart
-        [5, 5, 5], # Truck
-        [6, 6, 6]] # Monster truck
+STATS = [ # Vehicles:
+        [3, 4, 4], # Car
+        [4, 6, 3], # Motorcycle
+        [2, 3, 8], # Bus
+        [3, 7, 3], # Go kart
+        [5, 5, 6], # Truck
+        [6, 5, 10]] # Monster truck

@@ -52,6 +52,7 @@ def section_5():
     front_c('W') + 'Adjust the Y axis ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )',
     front_c('W') + 'Music volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_MUSIC * 100)}%' + front_c('W') + ' )',
     front_c('W') + 'SFX volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_SFX * 100)}%' + front_c('W') + ' )',
+    front_c('W') + 'Information of the program', 
     front_c('W') + 'Return to menu']
 
     # Text (options):
@@ -108,6 +109,13 @@ def section_5():
             elif option == 4:
                 # Edit volumen (SFX):
                 c.SECTION = 10
+
+                # SFX:
+                play_sfx('Go')
+
+            elif option == 5:
+                # Information:
+                c.SECTION = 6
 
                 # SFX:
                 play_sfx('Go')

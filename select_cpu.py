@@ -29,9 +29,12 @@ def section_13():
     # Variables:
     selected = 0
     spin = 0
-    max_spin = 17
-    c.VEHICLE_PLAYER_CPU = randint(0, min(c.MAX_VEHICLES, len(vehicles)) - 1)
+    max_spin = 18
     loop = True
+
+    # Random:
+    for i in range(randint(3, 7)): # Even more random
+        c.VEHICLE_PLAYER_CPU = randint(0, min(c.MAX_VEHICLES, len(vehicles)) - 1)
 
     # Loop:
     while loop == True:

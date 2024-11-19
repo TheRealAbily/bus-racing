@@ -19,8 +19,8 @@ distance_left = 19
 distance_right = 19
 option = ''
 
-# Main menu:
-def section_2():
+# Race:
+def section_15(firts_time):
     # Reset the variables:
     c.VEHICLE_PLAYER_1 = 0
     c.VEHICLE_PLAYER_2 = 0

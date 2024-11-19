@@ -18,7 +18,7 @@ import select_player_1 as s3
 import select_player_2 as s4
 import options_menu as s5
 import exit_menu as s6
-import last_page as s7
+import information as s7
 import edit_edge_x as s8
 import edit_edge_y as s9
 import edit_volume_music as s10
@@ -27,7 +27,8 @@ import exit_game as s12
 import select_cpu as s13
 import loading as s14
 import race as s15
-
+import lights as s16
+c.SECTION = 15
 # Start the program:
 while c.LOOP:
     # Presentation:
@@ -54,7 +55,7 @@ while c.LOOP:
     if c.SECTION == 5:
         s6.section_6()
 
-    # Last page:
+    # Information:
     if c.SECTION == 6:
         s7.section_7()
 
@@ -88,4 +89,12 @@ while c.LOOP:
 
     # Race:
     if c.SECTION == 14:
-        s15.section_15()
+        s15.section_15(True)
+
+    # Lights:
+    if c.SECTION == 15:
+        s16.section_16()
+
+    # Race:
+    if c.SECTION == 16:
+        s15.section_15(False)

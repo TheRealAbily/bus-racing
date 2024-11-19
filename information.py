@@ -18,7 +18,7 @@ edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 17
 distance_right = 17
 
-# Main menu:
+# Information:
 def section_7():
     # Clear the screen:
     clear()
