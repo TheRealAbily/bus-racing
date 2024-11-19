@@ -21,7 +21,7 @@ distance_right = 19
 option = ''
 
 # Vehicles:
-vehicles = ['Car', 'Monster car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
+vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster car', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
 # Selection of the vehicle (1 Player):
 def section_3():

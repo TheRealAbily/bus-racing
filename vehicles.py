@@ -34,17 +34,9 @@ def show_vehicle(vehicle, distance, **options):
         print((' ' * (edge_x + distance)), front_c('R') + " /", front_c('C') + "|_||_\\", front_c('R') + "`.__", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('R') + "(   ", front_c('W') + "_    _ ", front_c('R') + "_", front_c('Y') + "\\", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('W') + "=", front_c('R') + "`-", front_c('W') + "(_)", front_c('R') + "--", front_c('W') + "(_)", front_c('R') + "-", front_c('W') + "'", front_c('-'), sep='')
-    
-    # Monster car:
-    if vehicle == 1:
-        print((' ' * (edge_x + distance)), "", sep='')
-        print((' ' * (edge_x + distance)), front_c('R') + " _/\______", front_c('C') + "\\", front_c('R') + "__", front_c('-'), sep='')
-        print((' ' * (edge_x + distance)), front_c('R') + "/ ", front_c('W') + ",-.", front_c('R') + " -|-  ", front_c('W') + ",-.", front_c('R') + "`-", front_c('Y') + ".", front_c('-'), sep='')
-        print((' ' * (edge_x + distance)), front_c('R') + "`", front_c('W') + "( ", front_c('Y') +  "o", front_c('W') + " )", front_c('R') + "----", front_c('W') + "( ", front_c('Y') + "o", front_c('W') + " )", front_c('R') + "-'", front_c('-'), sep='')
-        print((' ' * (edge_x + distance)), front_c('W') + "  `-'      `-'", sep='')
         
     # Motorcycle:
-    if vehicle == 2:
+    if vehicle == 1:
         print((' ' * (edge_x + distance)), "", sep='')
         print((' ' * (edge_x + distance)), "", sep='')
         print((' ' * (edge_x + distance)), front_c('M') + "     ,", front_c('-'), sep='')
@@ -52,7 +44,7 @@ def show_vehicle(vehicle, distance, **options):
         print((' ' * (edge_x + distance)), front_c('W') + "(_)", front_c('M') + "'==", front_c('W') + "(_)", front_c('-'), sep='')
     
     # Bus:
-    if vehicle == 3:
+    if vehicle == 2:
         print((' ' * (edge_x + distance)), front_c('C') + "_______________", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('C') + "| ", front_c('BL') + "[][][][][] ", front_c('C') + "|_\_", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('C') + "| ", front_c('W') + ",-.       ,-. ", front_c('Y') + ".", front_c('C') + "|", front_c('-'), sep='')
@@ -60,7 +52,7 @@ def show_vehicle(vehicle, distance, **options):
         print((' ' * (edge_x + distance)), front_c('W') + "  `-'       `-'", front_c('-'), sep='')
     
     # Go kart:
-    if vehicle == 4:
+    if vehicle == 3:
         print((' ' * (edge_x + distance)), sep='')
         print((' ' * (edge_x + distance)), sep='')
         print((' ' * (edge_x + distance)), front_c('Y') + "__", front_c('-'), sep='')
@@ -68,12 +60,20 @@ def show_vehicle(vehicle, distance, **options):
         print((' ' * (edge_x + distance)), front_c('Y') + "'-", front_c('W') + "O", front_c('Y') + "---", front_c('W') + "O", front_c('Y') + "--", front_c('R') + "'", front_c('-'), sep='')
     
     # Truck:
-    if vehicle == 5:
+    if vehicle == 4:
         print((' ' * (edge_x + distance)), sep='')
         print((' ' * (edge_x + distance)), front_c('G') + "         ___", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('G') + "_________|", front_c('C') + "[_\\", front_c('G') + "___", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('G') + "|", front_c('R') + "o  ", front_c('W') + "_   ", front_c('G') + "|-  | ", front_c('W') + "_ ", front_c('Y') + "o", front_c('G') + ")", front_c('-'), sep='')
         print((' ' * (edge_x + distance)), front_c('G') + "'--", front_c('W') + "(_)", front_c('G') + "-------", front_c('W') + "(_)", front_c('G') + "´", front_c('-'), sep='')
+    
+    # Monster car:
+    if vehicle == 5:
+        print((' ' * (edge_x + distance)), "", sep='')
+        print((' ' * (edge_x + distance)), front_c('R') + " _/\______", front_c('C') + "\\", front_c('R') + "__", front_c('-'), sep='')
+        print((' ' * (edge_x + distance)), front_c('R') + "/ ", front_c('W') + ",-.", front_c('R') + " -|-  ", front_c('W') + ",-.", front_c('R') + "`-", front_c('Y') + ".", front_c('-'), sep='')
+        print((' ' * (edge_x + distance)), front_c('R') + "`", front_c('W') + "( ", front_c('Y') +  "o", front_c('W') + " )", front_c('R') + "----", front_c('W') + "( ", front_c('Y') + "o", front_c('W') + " )", front_c('R') + "-'", front_c('-'), sep='')
+        print((' ' * (edge_x + distance)), front_c('W') + "  `-'      `-'", sep='')
     
     # Reset colors:
     front_c('-', False)

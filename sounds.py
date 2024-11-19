@@ -86,7 +86,11 @@ def play_sfx(sfx):
         effect = pygame.mixer.Sound("resources/edit.wav")
     elif sfx == 'Error':
         effect = pygame.mixer.Sound("resources/error.wav")
-
+    elif sfx == 'Random':
+        effect = pygame.mixer.Sound("resources/random.wav")
+    elif sfx == 'Selected':
+        effect = pygame.mixer.Sound("resources/selected.wav")
+    
     # Volume:
     effect.set_volume(c.VOLUME_SFX)
 

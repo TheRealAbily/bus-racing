@@ -8,6 +8,7 @@ from screen import *
 from text import *
 from sounds import *
 from vehicles import *
+from random import randint
 
 # Config:
 import config as c
@@ -21,118 +22,93 @@ distance_right = 19
 option = ''
 
 # Vehicles:
-vehicles = ['Car', 'Monster car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
+vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Monster car', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
 # Selection of the vehicle (CPU):
 def section_13():
-    # Clear the screen:
-    clear()
-    print('Game mode:', c.GAME_MODE)
+    # Variables:
+    selected = 0
+    spin = 0
+    max_spin = 15
+    c.VEHICLE_PLAYER_CPU = randint(0, min(c.MAX_VEHICLES, len(vehicles)) - 1)
+    loop = True
 
-    # Edge Y:
-    edge(y=c.EDGE_Y)
-    
-    # Title:
-    # print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + ' ' + (' ' * distance_right) + front_c('Y'))
-    # print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '         ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '    ' + (' ' * distance_right) + front_c('Y'))
-    # print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + '    ' + back_c('B') + '  ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '  ' + back_c('B') + (' ' * distance_right) + front_c('Y'))
-    # print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '     ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '        ' + back_c('W') + ' ' + back_c('B') + '    ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + '  ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + (' ' * distance_right) + front_c('Y'))
-    # print(back_c('B') + front_c('Y') + (' ' * c.EDGE_X) + (' ' * distance_left) + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '    ' + back_c('W') + '   ' + back_c('B') + '      ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + '   ' + back_c('W') + '     ' + back_c('B') + '  ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + ' ' + back_c('B') + '   ' + back_c('W') + '   ' + back_c('B') + ' ' + (' ' * distance_right) + front_c('Y'))
+    # Loop:
+    while loop == True:
+        # Clear the screen:
+        clear()
 
-    #  ###   #####  #      #####   ###   #####  #####   ###   #   #  
-    # #      #      #      #      #        #      #    #   #  ##  #
-    #  ###   ###    #      ###    #        #      #    #   #  # # #  
-    #     #  #      #      #      #        #      #    #   #  #  ##  
-    #  ###   #####  #####  #####   ###     #    #####   ###   #   #  
+        # Edge Y:
+        edge(y=c.EDGE_Y)
 
-    # Banner middle:
-    color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=2)
+        # Banner middle:
+        color(f='Y', b='B', ff=False)
+        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=2)
 
-    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
-    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
+        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
+        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
 
-    color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
+        color(f='Y', b='B', ff=False)
+        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
-    # Edge Y:
-    edge(y=1)
-    
-    # Show the vehicle:
-    show_vehicle(c.VEHICLE_PLAYER_1, 30, x=c.EDGE_X)
+        # Edge Y:
+        edge(y=1)
+        
+        # Show the vehicle:
+        show_vehicle(c.VEHICLE_PLAYER_CPU, 30, x=c.EDGE_X)
 
-    # Edge Y:
-    edge(y=2)
-    
-    # Text phrases:
-    text_phrase = [front_c('Y') + '- Current vehicle of the CPU: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_1]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
+        # Edge Y:
+        edge(y=2)
+        
+        # Text:
+        text(styles_c('B') + front_c('Y') + '- Current vehicle of the CPU: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_CPU]}' + styles_c('N'), x=c.EDGE_X + 25, next=3)
 
-    # Text (options):
-    for r in range(len(text_phrase)):
-        if r == 0:
-            text(styles_c('B') + text_phrase[r] + styles_c('N'), x=c.EDGE_X + 25, next=3)
-        else:
-            text(front_c('G') + f'{r}.) ' + front_c('W') + styles_c('B') + text_phrase[r] + styles_c('N'), x=c.EDGE_X + 25, next=3)
+        # Banner bottom:
+        color(f='Y', b='B', ff=False)
+        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=3)
 
-    print((' ' * (c.EDGE_X + 28)), front_c('Y') + styles_c('B') + '- Select the option: ' + styles_c('N') + front_c('W'), end='', sep='')
-    
-    # Banner bottom:
-    color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=3)
+        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
+        line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
 
-    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
-    line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
+        color(f='Y', b='B', ff=False)
+        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
-    color(f='Y', b='B', ff=False)
-    line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
+        # Select the option:
+        color(f='', b='', s='', ff=False)
+        if selected == 1:
+            # SFX:
+            play_sfx('Selected')
 
-    # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
+            # Move the cursor:
+            pos(x=c.EDGE_X + 0, y=c.EDGE_Y + 16)
 
-    # Select the option:
-    color(f='', b='', s='', ff=False)
-    option = input()
+            # Text:
+            print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('D') + '- Press' + front_c('G') + ' <enter> ' + front_c('W') + 'to continue - ' + front_c('W'), end='', sep='')
+            input()
 
-    # Try converting the value to int (this worked first time):
-    try:
-        option = int(option)
-
-        if not 1 <= option <= 4:
-            raise ValueError
-        else:
-            # Options:
-            if option == 1:
-                if c.VEHICLE_PLAYER_1 < min(c.MAX_VEHICLES, len(vehicles)) - 1:
-                    c.VEHICLE_PLAYER_1 += 1
-                else:
-                    c.VEHICLE_PLAYER_1 = 0
-
-                # SFX:
-                play_sfx('Edit')
+            # Loop:
+            loop = False
+        elif selected == 0:
+            # SFX:
+            play_sfx('Random')
             
-            elif option == 2:
-                if c.VEHICLE_PLAYER_1 > 0:
-                    c.VEHICLE_PLAYER_1 -= 1
-                else:
-                    c.VEHICLE_PLAYER_1 = min(c.MAX_VEHICLES, len(vehicles)) - 1
+            # Variable:
+            selected = 2
+        else:
+            # Wait:
+            wait(0.25)
 
-                # SFX:
-                play_sfx('Edit')
-            
-            elif option == 3:
-                print('Hola')
-
-                # SFX:
-                play_sfx('Go')
+            # Random:
+            if c.VEHICLE_PLAYER_CPU < min(c.MAX_VEHICLES, len(vehicles)) - 1:
+                c.VEHICLE_PLAYER_CPU += 1
             else:
-                c.SECTION = 1
+                c.VEHICLE_PLAYER_CPU = 0
 
-                # SFX:
-                play_sfx('Back')
-    
-    except ValueError:
-        # SFX:
-        play_sfx('Error')
+            # Spins:
+            if spin < max_spin:
+                spin += 1
 
-        # Variable:
-        option = ''
+                # Move the cursor:
+                pos(x=c.EDGE_X + 43, y=c.EDGE_Y + 15)
+            else:
+                selected = True

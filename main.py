@@ -25,7 +25,7 @@ import section_10 as s10
 import section_11 as s11
 import section_12 as s12
 import section_13 as s13
-
+c.SECTION = 12
 # Start the program:
 while c.LOOP:
     # Presentation:
