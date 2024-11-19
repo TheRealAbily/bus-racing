@@ -88,8 +88,23 @@ def section_2():
         if not 1 <= option <= 4:
             raise ValueError
         else:
-            # Selection:
-            c.SECTION = (option + 1)
+            # 1 Player:
+            if option == 1:
+                c.SECTION = 2
+                GAME_MODE = 0
+            
+            # 2 Players:
+            elif option == 2:
+                c.SECTION = 2
+                GAME_MODE = 1
+            
+            # 3 Options:
+            elif option == 3:
+                c.SECTION = 4
+            
+            # Exit:
+            else:
+                c.SECTION = 5
 
             # SFX:
             play_sfx('Go')

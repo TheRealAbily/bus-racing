@@ -21,9 +21,9 @@ distance_right = 19
 option = ''
 
 # Vehicles:
-vehicles = ['Car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
+vehicles = ['Car', 'Monster car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
-# Selection of the player (1 Player):
+# Selection of the vehicle (1 Player):
 def section_3():
     # Clear the screen:
     clear()
@@ -55,7 +55,7 @@ def section_3():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Edge Y:
-    edge(y=2)
+    edge(y=1)
     
     # Show the vehicle:
     show_vehicle(c.VEHICLE_PLAYER_1, 30, x=c.EDGE_X)
@@ -64,7 +64,7 @@ def section_3():
     edge(y=2)
     
     # Text phrases:
-    text_phrase = [front_c('Y') + '- Current vehicle: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_1]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
+    text_phrase = [front_c('Y') + '- Current vehicle of the player 1: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_1]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
 
     # Text (options):
     for r in range(len(text_phrase)):
@@ -119,7 +119,11 @@ def section_3():
                 play_sfx('Edit')
             
             elif option == 3:
-                print('Hola')
+                # Selection mode:
+                if c.GAME_MODE == 0:
+                    c.SECTION = 12
+                else:
+                    c.SECTION = 3
 
                 # SFX:
                 play_sfx('Go')

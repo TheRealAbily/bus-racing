@@ -24,6 +24,7 @@ import section_9 as s9
 import section_10 as s10
 import section_11 as s11
 import section_12 as s12
+import section_13 as s13
 c.SECTION = 2
 # Start the program:
 while c.LOOP:
@@ -74,3 +75,7 @@ while c.LOOP:
     # Exit:
     if c.SECTION == 11:
         s12.section_12()
+    
+    # Selection of car (CPU):
+    if c.SECTION == 12:
+        s13.section_13()

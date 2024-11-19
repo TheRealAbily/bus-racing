@@ -23,8 +23,8 @@ option = ''
 # Vehicles:
 vehicles = ['Car', 'Monster car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Formula 1', 'Bicycle'] # More vehicles coming soon...
 
-# Selection of the vehicle (2 Player):
-def section_4():
+# Selection of the vehicle (CPU):
+def section_13():
     # Clear the screen:
     clear()
 
@@ -64,7 +64,7 @@ def section_4():
     edge(y=2)
     
     # Text phrases:
-    text_phrase = [front_c('Y') + '- Current vehicle of the player 2: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_2]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
+    text_phrase = [front_c('Y') + '- Current vehicle of the CPU: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_1]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
 
     # Text (options):
     for r in range(len(text_phrase)):
@@ -101,25 +101,25 @@ def section_4():
         else:
             # Options:
             if option == 1:
-                if c.VEHICLE_PLAYER_2 < min(c.MAX_VEHICLES, len(vehicles)) - 1:
-                    c.VEHICLE_PLAYER_2 += 1
+                if c.VEHICLE_PLAYER_1 < min(c.MAX_VEHICLES, len(vehicles)) - 1:
+                    c.VEHICLE_PLAYER_1 += 1
                 else:
-                    c.VEHICLE_PLAYER_2 = 0
+                    c.VEHICLE_PLAYER_1 = 0
 
                 # SFX:
                 play_sfx('Edit')
             
             elif option == 2:
-                if c.VEHICLE_PLAYER_2 > 0:
-                    c.VEHICLE_PLAYER_2 -= 1
+                if c.VEHICLE_PLAYER_1 > 0:
+                    c.VEHICLE_PLAYER_1 -= 1
                 else:
-                    c.VEHICLE_PLAYER_2 = min(c.MAX_VEHICLES, len(vehicles)) - 1
+                    c.VEHICLE_PLAYER_1 = min(c.MAX_VEHICLES, len(vehicles)) - 1
 
                 # SFX:
                 play_sfx('Edit')
             
             elif option == 3:
-                c.SECTION = 13
+                print('Hola')
 
                 # SFX:
                 play_sfx('Go')
