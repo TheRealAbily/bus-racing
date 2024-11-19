@@ -79,10 +79,10 @@ def section_12():
     clear()
 
     # Less volume:
-    less = c.VOLUME_MUSIC / 10
+    less = c.VOLUME_MUSIC / 20
 
     # Turn down the volume:
-    for i in range(10):
+    for i in range(20):
         c.VOLUME_MUSIC -= less
         volume()    
         wait(0.1)

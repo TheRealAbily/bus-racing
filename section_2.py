@@ -90,4 +90,8 @@ def section_2():
             play_sfx('Go')
     
     except ValueError:
+        # SFX:
+        play_sfx('Error')
+
+        # Variable:
         option = ''

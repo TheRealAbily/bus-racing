@@ -95,4 +95,8 @@ def section_6():
                 play_sfx('Back')
     
     except ValueError:
+        # SFX:
+        play_sfx('Error')
+
+        # Variable:
         option = ''
