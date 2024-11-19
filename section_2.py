@@ -91,17 +91,17 @@ def section_2():
             # 1 Player:
             if option == 1:
                 c.SECTION = 2
-                GAME_MODE = 0
+                c.GAME_MODE = 0
             
             # 2 Players:
             elif option == 2:
                 c.SECTION = 2
-                GAME_MODE = 1
+                c.GAME_MODE = 1
             
-            # 3 Options:
+            # Options:
             elif option == 3:
                 c.SECTION = 4
-            
+
             # Exit:
             else:
                 c.SECTION = 5

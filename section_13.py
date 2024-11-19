@@ -27,6 +27,7 @@ vehicles = ['Car', 'Monster car', 'Motorcycle', 'Bus', 'Go kart', 'Truck', 'Form
 def section_13():
     # Clear the screen:
     clear()
+    print('Game mode:', c.GAME_MODE)
 
     # Edge Y:
     edge(y=c.EDGE_Y)
