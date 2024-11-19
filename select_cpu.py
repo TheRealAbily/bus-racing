@@ -29,7 +29,7 @@ def section_13():
     # Variables:
     selected = 0
     spin = 0
-    max_spin = 15
+    max_spin = 17
     c.VEHICLE_PLAYER_CPU = randint(0, min(c.MAX_VEHICLES, len(vehicles)) - 1)
     loop = True
 
@@ -65,7 +65,7 @@ def section_13():
 
         # Banner bottom:
         color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=3)
+        line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=2)
 
         line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True)
         line(black, floor(c.WIDHT / 2), intr=white, points=edges, x=c.EDGE_X, less=True, switch=True)
@@ -80,7 +80,7 @@ def section_13():
             play_sfx('Selected')
 
             # Move the cursor:
-            pos(x=c.EDGE_X + 0, y=c.EDGE_Y + 16)
+            pos(y=c.EDGE_Y + 17)
 
             # Text:
             print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('D') + '- Press' + front_c('G') + ' <enter> ' + front_c('W') + 'to continue - ' + front_c('W'), end='', sep='')
@@ -88,6 +88,9 @@ def section_13():
 
             # Loop:
             loop = False
+
+            # Variable:
+            c.SECTION = 13
         elif selected == 0:
             # SFX:
             play_sfx('Random')
@@ -109,6 +112,6 @@ def section_13():
                 spin += 1
 
                 # Move the cursor:
-                pos(x=c.EDGE_X + 43, y=c.EDGE_Y + 15)
+                pos(x=c.EDGE_X + 40, y=c.EDGE_Y + 14)
             else:
                 selected = True

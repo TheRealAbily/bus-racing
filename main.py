@@ -12,20 +12,22 @@ from sounds import *
 import config as c
 
 # Program:
-import section_1 as s1
-import section_2 as s2
-import section_3 as s3
-import section_4 as s4
-import section_5 as s5
-import section_6 as s6
-import section_7 as s7
-import section_8 as s8
-import section_9 as s9
-import section_10 as s10
-import section_11 as s11
-import section_12 as s12
-import section_13 as s13
-c.SECTION = 12
+import presentation as s1
+import main_menu as s2
+import select_player_1 as s3
+import select_player_2 as s4
+import options_menu as s5
+import exit_menu as s6
+import last_page as s7
+import edit_edge_x as s8
+import edit_edge_y as s9
+import edit_volume_music as s10
+import edit_volume_sfx as s11
+import exit_game as s12
+import select_cpu as s13
+import loading as s14
+import race as s15
+
 # Start the program:
 while c.LOOP:
     # Presentation:
@@ -48,7 +50,7 @@ while c.LOOP:
     if c.SECTION == 4:
         s5.section_5()
 
-    # Exit of the game:
+    # Exit of the game (menu):
     if c.SECTION == 5:
         s6.section_6()
 
@@ -72,10 +74,18 @@ while c.LOOP:
     if c.SECTION == 10:
         s11.section_11()
     
-    # Exit:
+    # Exit of the game (exit):
     if c.SECTION == 11:
         s12.section_12()
     
     # Selection of car (CPU):
     if c.SECTION == 12:
         s13.section_13()
+
+    # Loading:
+    if c.SECTION == 13:
+        s14.section_14()
+
+    # Race:
+    if c.SECTION == 14:
+        s15.section_15()

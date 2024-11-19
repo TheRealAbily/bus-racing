@@ -90,6 +90,8 @@ def play_sfx(sfx):
         effect = pygame.mixer.Sound("resources/random.wav")
     elif sfx == 'Selected':
         effect = pygame.mixer.Sound("resources/selected.wav")
+    elif sfx == 'Car_passing':
+        effect = pygame.mixer.Sound("resources/car_passing.wav")
     
     # Volume:
     effect.set_volume(c.VOLUME_SFX)
