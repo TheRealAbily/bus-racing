@@ -28,7 +28,7 @@ import select_cpu as s13
 import loading as s14
 import race as s15
 import lights as s16
-c.SECTION = 15
+
 # Start the program:
 while c.LOOP:
     # Presentation:

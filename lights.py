@@ -15,50 +15,61 @@ import config as c
 # Lights:
 def section_16():
     # SFX:
-    play_sfx('Countdown')
+    play_sfx('Pre start')
 
     # Variable:
-    distance = 0
+    distance = 27
+    light_c1 = front_c('W')
+    light_c2 = front_c('W')
+    light_c3 = front_c('W')
+    light_c4 = front_c('W')
 
     # Lights:
-    for m in range(4):
+    for m in range(5):
         # Clear the screen:
         clear()
 
         # Spaces:
-        edge(y=c.EDGE_Y)
+        edge(y=c.EDGE_Y + 5)
 
         # Colors:
         back_c('B', False)
-        if m < 2:
-            front_c('R', False)
+        
+        if m == 1:
+            light_c1 = front_c('R')
+
+            # SFX:
+            play_sfx('Countdown')
         elif m == 2:
-            front_c('Y', False)
-        else:
-            front_c('G', False)
+            light_c2 = front_c('R')
+        elif m == 3:
+            light_c3 = front_c('Y')
+        elif m == 4:
+            light_c4 = front_c('G')
 
         # Light:
-        print(m)
-        print((' ' * (c.EDGE_X + distance)), '        __________________________________', sep='')
-        print((' ' * (c.EDGE_X + distance)), '       /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '      /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '     /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '    /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '   /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  /XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\\', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  |XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX|', sep='')
-        print((' ' * (c.EDGE_X + distance)), '  \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
-        print((' ' * (c.EDGE_X + distance)), '   \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
-        print((' ' * (c.EDGE_X + distance)), '    \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
-        print((' ' * (c.EDGE_X + distance)), '     \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
-        print((' ' * (c.EDGE_X + distance)), '      \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
-        print((' ' * (c.EDGE_X + distance)), '       \\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '       _____________        _____________ ', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + ' _______ ', front_c('W') + '  |      |  ', light_c1 + ' _______ ', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c1 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '\XXXXXXX/', front_c('W') + '  |------|  ', light_c1 + '\XXXXXXX/', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + ' _______ ', front_c('W') + '  |------|  ', light_c2 + ' _______ ', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c2 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '\XXXXXXX/', front_c('W') + '  |      |  ', light_c2 + '\XXXXXXX/', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + ' _______ ', front_c('W') + '  |      |  ', light_c3 + ' _______ ', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c3 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '\XXXXXXX/', front_c('W') + '  |------|  ', light_c3 + '\XXXXXXX/', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + ' _______ ', front_c('W') + '  |------|  ', light_c4 + ' _______ ', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c4 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '\XXXXXXX/', front_c('W') + '  |      |  ', light_c4 + '\XXXXXXX/', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |_____________|      |___________', front_c('W') + '__|', sep='')
 
         # Spaces:
         edge(y=c.EDGE_Y)
@@ -71,12 +82,14 @@ def section_16():
         pos(x=c.EDGE_X + 0, y=c.EDGE_Y + 0)
 
         # Wait:
-        if m < 3:
+        if m == 0:
+            wait(2.65)
+        elif m < 4:
             # Time:
             wait(0.9)
         else:
             # Time:
-            wait(1.25)
+            wait(1.5)
 
             # Variable:
             c.SECTION = 16

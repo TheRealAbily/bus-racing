@@ -2,6 +2,7 @@
 
 import pygame
 import sys
+from random import randint
 
 # Config:
 import config as c
@@ -13,8 +14,8 @@ pygame.init()
 screen_scale = 300
 
 # Images:
-image_sound_1 = pygame.image.load('resources/sound_1.png')
-image_sound_2 = pygame.image.load('resources/sound_2.png')
+image_sound_1 = pygame.image.load('resources/images/sound_1.png')
+image_sound_2 = pygame.image.load('resources/images/sound_2.png')
 
 # Scale:
 image_sound_1 = pygame.transform.scale(image_sound_1, ((screen_scale/5) * 4, (screen_scale/5) * 4))
@@ -34,7 +35,7 @@ screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Music and SFX")
 
 # Icon:
-icon = pygame.image.load("resources/icon.png")
+icon = pygame.image.load("resources/images/icon.png")
 
 # Show the icon:
 pygame.display.set_icon(icon)
@@ -55,8 +56,22 @@ def play_music(music):
 
     # Music:
     if music == 'Main menu':
-        pygame.mixer.music.load("resources/title_screen.mp3")
+        pygame.mixer.music.load("resources/sounds/title_screen.mp3")
+    elif music == 'Track':
+        selection = randint(1, 3)
 
+        if selection == 1:
+            pygame.mixer.music.load("resources/sounds/track_1.mp3")
+
+        elif selection == 2:
+            pygame.mixer.music.load("resources/sounds/track_2.mp3")
+
+        elif selection == 3:
+            pygame.mixer.music.load("resources/sounds/track_3.mp3")
+
+        else:
+            pygame.mixer.music.load("resources/sounds/track_4.mp3")
+        
     # Volume:
     pygame.mixer.music.set_volume(c.VOLUME_MUSIC)
 
@@ -77,21 +92,35 @@ def exit_window():
 def play_sfx(sfx):
     # SFX:
     if sfx == 'Back':
-        effect = pygame.mixer.Sound("resources/back.wav")
+        effect = pygame.mixer.Sound("resources/sounds/back.wav")
     elif sfx == 'Countdown':
-        effect = pygame.mixer.Sound("resources/countdown.wav")
+        effect = pygame.mixer.Sound("resources/sounds/countdown.wav")
     elif sfx == 'Go':
-        effect = pygame.mixer.Sound("resources/go.wav")
+        effect = pygame.mixer.Sound("resources/sounds/go.wav")
     elif sfx == 'Edit':
-        effect = pygame.mixer.Sound("resources/edit.wav")
+        effect = pygame.mixer.Sound("resources/sounds/edit.wav")
     elif sfx == 'Error':
-        effect = pygame.mixer.Sound("resources/error.wav")
+        effect = pygame.mixer.Sound("resources/sounds/error.wav")
     elif sfx == 'Random':
-        effect = pygame.mixer.Sound("resources/random.wav")
+        effect = pygame.mixer.Sound("resources/sounds/random.wav")
     elif sfx == 'Selected':
-        effect = pygame.mixer.Sound("resources/selected.wav")
-    elif sfx == 'Car_passing':
-        effect = pygame.mixer.Sound("resources/car_passing.wav")
+        effect = pygame.mixer.Sound("resources/sounds/selected.wav")
+    elif sfx == 'Car passing':
+        effect = pygame.mixer.Sound("resources/sounds/car_passing.wav")
+    elif sfx == 'Show race track':
+        selection = randint(1, 2)
+
+        if selection == 1:
+            effect = pygame.mixer.Sound("resources/sounds/show_race_track_1.wav")
+        else:
+            effect = pygame.mixer.Sound("resources/sounds/show_race_track_2.wav")
+    elif sfx == 'Pre start':
+        selection = randint(1, 2)
+
+        if selection == 1:
+            effect = pygame.mixer.Sound("resources/sounds/pre_start_1.wav")
+        else:
+            effect = pygame.mixer.Sound("resources/sounds/pre_start_2.wav")
     
     # Volume:
     effect.set_volume(c.VOLUME_SFX)

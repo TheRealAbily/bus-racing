@@ -28,6 +28,12 @@ def line(symbol, count, **options):
     else:
         edge_x = 0
     
+    # Point left:
+    symbol_left = options.get('left', '')
+    
+    # Point right:
+    symbol_right = options.get('right', '')
+    
     # Edge Y:
     if 'y' in options:
         edge_y = options.get('y', 0)
@@ -73,13 +79,13 @@ def line(symbol, count, **options):
     count = (count - floor(count / 2)) if less == True else count
 
     # Show the line 1/2:
-    print(('\n' * edge_y), (' ' * edge_x), symbol_end, end='', sep='')
+    print(('\n' * edge_y), (' ' * edge_x), symbol_left, symbol_end, end='', sep='')
 
     # Show the line 2/2:
     if count > 1 and symbol_intr != '':
         if switch == True:
-            print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, end=('\n' * next_line), sep='')
+            print((f'{symbol}{symbol_intr}') * (count - 1), symbol, symbol_end, symbol_right, end=('\n' * next_line), sep='')
         else:
-            print((f'{symbol_intr}{symbol}') * (count - 1), symbol_intr, symbol_end, end=('\n' * next_line), sep='')
+            print((f'{symbol_intr}{symbol}') * (count - 1), symbol_intr, symbol_end, symbol_right, end=('\n' * next_line), sep='')
     else:
-        print(symbol * count, symbol_end, end=('\n' * next_line), sep='')
+        print(symbol * count, symbol_end, symbol_right, end=('\n' * next_line), sep='')

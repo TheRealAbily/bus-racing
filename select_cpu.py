@@ -103,6 +103,9 @@ def section_13():
             print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('D') + '- Press' + front_c('G') + ' <enter> ' + front_c('W') + 'to continue - ' + front_c('W'), end='', sep='')
             input()
 
+            # SFX:
+            play_sfx('Go')
+
             # Loop:
             loop = False
 

@@ -51,7 +51,7 @@ def section_14():
         line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
     
     # Line text:
-    text(color(f='W', b='B', s='B') + ' - Loading. ' + front_c('G') + 'Wait a minute...' + front_c('W') + ' -  ', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (34 * 2), distance_1=0, distance_2=0, x=c.EDGE_X)
+    text(color(f='W', b='B', s='B') + ' - Loading. Wait a minute... -  ', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (34 * 2), distance_1=0, distance_2=0, x=c.EDGE_X)
 
     # Spaces:
     line(' ', c.WIDHT + c.EXTRA_FIX - 2, points=(color(f='Y') + '||'), x=c.EDGE_X)
@@ -71,7 +71,7 @@ def section_14():
     pos(x=c.EDGE_X + 66, y=c.EDGE_Y + 16)
 
     # Wait:
-    wait(randint(2, 4))
+    wait(randint(15, 25) / 10)
     
     # Move the cursor:
     pos(x=0, y=c.EDGE_Y + 16)
@@ -82,14 +82,36 @@ def section_14():
     # Move the cursor:
     pos(x=c.EDGE_X + 66, y=c.EDGE_Y + 16)
 
-    # SFX:
-    play_sfx('Car_passing')
-
     # Pause the program:
     input()
 
-    # Section:
-    c.SECTION = 1
+    # Move the cursor:
+    pos(x=c.EDGE_X + 66, y=c.EDGE_Y + 16)
 
     # SFX:
-    play_sfx('Go')
+    play_sfx('Car passing')
+    
+    # Less volume:
+    less = c.VOLUME_MUSIC / 20
+
+    # Turn down the volume:
+    for i in range(20):
+        c.VOLUME_MUSIC -= less
+        volume()    
+        wait(0.1)
+
+    # Stop the music:
+    stop_music()
+
+    # Original volume:
+    c.VOLUME_MUSIC = less * 20
+    volume() 
+
+    # Clear:
+    clear()
+    
+    # Time:
+    wait(2)
+
+    # Section:
+    c.SECTION = 14

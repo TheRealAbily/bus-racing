@@ -72,7 +72,7 @@ def section_5():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 32)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -82,7 +82,7 @@ def section_5():
     try:
         option = int(option)
 
-        if not 1 <= option <= 5:
+        if not 1 <= option <= 6:
             raise ValueError
         else:
             if option == 1:
