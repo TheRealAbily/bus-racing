@@ -49,7 +49,7 @@ def line(symbol, count, **options):
     
     # Next lines:
     if 'next' in options:
-        next_line = options.get('next', '\n')
+        next_line = options.get('next', 1)
 
         # Convert the variable to int:
         if not isinstance(next_line, int):

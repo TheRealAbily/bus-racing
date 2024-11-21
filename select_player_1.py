@@ -74,6 +74,9 @@ def section_3():
     else:
         show_vehicle(c.VEHICLE_PLAYER_1, distance + 1, x=c.EDGE_X)
 
+    # Random track:
+    c.TRACK = randint(1, 4)
+
     # Edge Y:
     edge(y=2)
     

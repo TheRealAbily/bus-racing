@@ -58,18 +58,20 @@ def play_music(music):
     if music == 'Main menu':
         pygame.mixer.music.load("resources/sounds/title_screen.mp3")
     elif music == 'Track':
-        selection = randint(1, 3)
-
-        if selection == 1:
+        if c.TRACK == 1:
+            # 8
             pygame.mixer.music.load("resources/sounds/track_1.mp3")
 
-        elif selection == 2:
+        elif c.TRACK == 2:
+            # Delfino
             pygame.mixer.music.load("resources/sounds/track_2.mp3")
 
-        elif selection == 3:
+        elif c.TRACK == 3:
+            # Pinball
             pygame.mixer.music.load("resources/sounds/track_3.mp3")
 
         else:
+            # Rainbow road
             pygame.mixer.music.load("resources/sounds/track_4.mp3")
         
     # Volume:

@@ -28,7 +28,7 @@ def section_16():
     for m in range(5):
         # Clear the screen:
         clear()
-
+        
         # Spaces:
         edge(y=c.EDGE_Y + 5)
 
@@ -41,34 +41,34 @@ def section_16():
             # SFX:
             play_sfx('Countdown')
         elif m == 2:
-            light_c2 = front_c('R')
+            light_c2 = (front_c('R') + styles_c('B'))
         elif m == 3:
-            light_c3 = front_c('Y')
+            light_c3 = (front_c('Y') + styles_c('B'))
         elif m == 4:
-            light_c4 = front_c('G')
+            light_c4 = (front_c('G') + styles_c('B'))
 
         # Light:
         print((' ' * (c.EDGE_X + distance)), front_c('W') + '       _____________        _____________ ', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + ' _______ ', front_c('W') + '  |      |  ', light_c1 + ' _______ ', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c1 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '\XXXXXXX/', front_c('W') + '  |------|  ', light_c1 + '\XXXXXXX/', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + ' _______ ', front_c('W') + '  |------|  ', light_c2 + ' _______ ', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c2 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '\XXXXXXX/', front_c('W') + '  |      |  ', light_c2 + '\XXXXXXX/', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + ' _______ ', front_c('W') + '  |      |  ', light_c3 + ' _______ ', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c3 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '\XXXXXXX/', front_c('W') + '  |------|  ', light_c3 + '\XXXXXXX/', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + ' _______ ', front_c('W') + '  |------|  ', light_c4 + ' _______ ', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '/XXXXXXX\\', front_c('W') + '  |      |  ', light_c4 + '/XXXXXXX\\', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|', front_c('W') + '  |', sep='')
-        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '\XXXXXXX/', front_c('W') + '  |      |  ', light_c4 + '\XXXXXXX/', front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + ' _______ ',  styles_c('N'), front_c('W') + '  |      |  ', light_c1 + ' _______ ',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |      |  ', light_c1 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c1 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c1 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |------|  ', light_c1 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + ' _______ ',  styles_c('N'), front_c('W') + '  |------|  ', light_c2 + ' _______ ',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |      |  ', light_c2 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c2 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c2 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |      |  ', light_c2 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + ' _______ ',  styles_c('N'), front_c('W') + '  |      |  ', light_c3 + ' _______ ',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |      |  ', light_c3 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c3 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c3 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |------|  ', light_c3 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + ' _______ ',  styles_c('N'), front_c('W') + '  |------|  ', light_c4 + ' _______ ',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |      |  ', light_c4 + '/XXXXXXX\\', styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |      |  ', light_c4 + '|XXXXXXX|',  styles_c('N'), front_c('W') + '  |', sep='')
+        print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |  ', light_c4 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |      |  ', light_c4 + '\XXXXXXX/',  styles_c('N'), front_c('W') + '  |', sep='')
         print((' ' * (c.EDGE_X + distance)), front_c('W') + '      |_____________|      |___________', front_c('W') + '__|', sep='')
 
         # Spaces:

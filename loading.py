@@ -105,7 +105,10 @@ def section_14():
 
     # Original volume:
     c.VOLUME_MUSIC = less * 20
-    volume() 
+    volume()
+
+    # Random track:
+    c.TRACK = randint(1, 4)
 
     # Clear:
     clear()

@@ -12,8 +12,8 @@ from sounds import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
-white = (color(b='W') + '  ')
+firts_color = (color(b='B') + '  ')
+second_color = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 19
 distance_right = 19
@@ -24,12 +24,41 @@ def section_15(firts_time):
     # Clear the screen:
     clear()
 
+    # Track color:
+    if c.TRACK == 1:
+        track_color = 'R'
+    if c.TRACK == 2:
+        track_color = 'Bl'
+    if c.TRACK == 3:
+        track_color = 'M'
+    else:
+        track_color = 'G'
+    
+    firts_color = (color(b=track_color) + '  ')
+
+    
+    # Track:
+    track_line = [back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
+        back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ',
+        back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
+        back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ',
+        back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
+        back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ',
+        back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
+        back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ',
+        back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
+        back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ', back_c('B') + ' ']
+    track_line_init = track_line
+    
     # Only see:
     if firts_time == True:
-        # Variable:
+        # Variables:
         section = 0
         loop = True
         switch = False
+        count = 0
+        max_count = 3
+        selected_color = 'B'
 
         # SFX:
         play_sfx('Show race track')
@@ -42,9 +71,9 @@ def section_15(firts_time):
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-                line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
                 back_c('B', False)
-                line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True, switch=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
                 back_c('B', False)
 
                 color(f='Y', b='B', ff=False)
@@ -52,20 +81,22 @@ def section_15(firts_time):
 
                 # Spaces:
                 edge(y=7)
-                
-                # Line:
-                line(back_c('W') + (' ' * 10), 5, intr=back_c('B') + (' ' * 10), x=c.EDGE_X, switch=True)
+                print((' ' * c.EDGE_X), end='')
 
+                # Line:
+                for j in range(len(track_line)):
+                    print(track_line[j], end='', sep='')
+                
                 # Spaces:
-                edge(y=7)
+                edge(y=6)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-                line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
                 back_c('B', False)
-                line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True, switch=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
                 back_c('B', False)
 
                 color(f='Y', b='B', ff=False)
@@ -77,7 +108,7 @@ def section_15(firts_time):
                 # Variable:
                 section = 1
             
-            elif 1 <= section <= 40:
+            elif 1 <= section <= 80:
                 # Clear the screen:
                 clear()
 
@@ -86,14 +117,14 @@ def section_15(firts_time):
                 line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X, y=2)
 
                 if switch == True:
-                    line(black, floor(c.WIDHT / 2), intr=white, x=c.EDGE_X, less=True)
+                    line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
                     back_c('B', False)
-                    line(black, floor(c.WIDHT / 2), intr=white, x=c.EDGE_X, less=True, switch=True)
+                    line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
                     back_c('B', False)
                 else:
-                    line(white, floor(c.WIDHT / 2), intr=black, x=c.EDGE_X, less=True)
+                    line(second_color, floor(c.WIDHT / 2), intr=firts_color, x=c.EDGE_X, less=True)
                     back_c('B', False)
-                    line(white, floor(c.WIDHT / 2), intr=black, x=c.EDGE_X, less=True, switch=True)
+                    line(second_color, floor(c.WIDHT / 2), intr=firts_color, x=c.EDGE_X, less=True, switch=True)
                     back_c('B', False)
                 
                 color(f='Y', b='B', ff=False)
@@ -102,32 +133,54 @@ def section_15(firts_time):
                 # Spaces:
                 edge(y=7)
                 
-                # Line:
-                line(back_c('W') + (' ' * 10), 5, intr=back_c('B') + (' ' * 10), x=c.EDGE_X, switch=True)
+                # Append:
+                if count < max_count:
+                    count += 1
+                else:
+                    count = 0
+                    max_count = 10
 
+                    # Switch color:
+                    if selected_color == 'B':
+                        selected_color = 'W'
+                    else:
+                        selected_color = 'B'
+                
+                track_line.append(back_c(selected_color) + ' ')
+
+                # Pop:
+                track_line.pop(0)
+
+                # Space:
+                print(' ' * c.EDGE_X, end='')
+
+                # Line:
+                for j in range(len(track_line)):
+                    print(track_line[j], end='', sep='')
+                
                 # Spaces:
-                edge(y=7)
+                edge(y=6)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X, y=2)
 
                 if switch == True:
-                    line(black, floor(c.WIDHT / 2), intr=white, x=c.EDGE_X, less=True)
+                    line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
                     back_c('B', False)
-                    line(black, floor(c.WIDHT / 2), intr=white, x=c.EDGE_X, less=True, switch=True)
+                    line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
                     back_c('B', False)
                 else:
-                    line(white, floor(c.WIDHT / 2), intr=black, x=c.EDGE_X, less=True)
+                    line(second_color, floor(c.WIDHT / 2), intr=firts_color, x=c.EDGE_X, less=True)
                     back_c('B', False)
-                    line(white, floor(c.WIDHT / 2), intr=black, x=c.EDGE_X, less=True, switch=True)
+                    line(second_color, floor(c.WIDHT / 2), intr=firts_color, x=c.EDGE_X, less=True, switch=True)
                     back_c('B', False)
 
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
 
                 # Time:
-                wait(0.15) # 7.5
+                wait(0.075) # 7.5
 
                 # Variable:
                 section += 1
@@ -145,9 +198,9 @@ def section_15(firts_time):
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, right='o', x=c.EDGE_X, y=2)
 
-                line(black, floor(c.WIDHT / 2), intr=white, right=edges, x=c.EDGE_X, less=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, right=edges, x=c.EDGE_X, less=True)
                 back_c('B', False)
-                line(black, floor(c.WIDHT / 2), intr=white, right=edges, x=c.EDGE_X, less=True, switch=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, right=edges, x=c.EDGE_X, less=True, switch=True)
                 back_c('B', False)
 
                 color(f='Y', b='B', ff=False)
@@ -155,24 +208,26 @@ def section_15(firts_time):
 
                 # Spaces:
                 edge(y=7)
+                print(' ' * c.EDGE_X, end='')
                 
                 # Line:
-                line(back_c('W') + (' ' * 10), 5, intr=back_c('B') + (' ' * 10), x=c.EDGE_X, switch=True)
-
+                for j in range(len(track_line)):
+                    print(track_line[j], end='', sep='')
+                
                 # Spaces:
-                edge(y=7)
+                edge(y=6)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
-                line('=', c.WIDHT + c.EXTRA_FIX + 1, right='o', x=c.EDGE_X, y=2)
+                line('=', c.WIDHT + c.EXTRA_FIX, right='o', x=c.EDGE_X, y=2)
 
-                line(black, floor(c.WIDHT / 2), intr=white, right=back_c('B') + ' ' + edges, x=c.EDGE_X, less=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, right=edges, x=c.EDGE_X, less=True)
                 back_c('B', False)
-                line(black, floor(c.WIDHT / 2), intr=white, right=back_c('W') + ' ' + back_c('B') + edges, x=c.EDGE_X, less=True, switch=True)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, right=edges, x=c.EDGE_X, less=True, switch=True)
                 back_c('B', False)
 
                 color(f='Y', b='B', ff=False)
-                line('=', c.WIDHT + c.EXTRA_FIX + 1, right='o', x=c.EDGE_X)
+                line('=', c.WIDHT + c.EXTRA_FIX, right='o', x=c.EDGE_X)
 
                 # Time:
                 wait(3)
@@ -191,9 +246,9 @@ def section_15(firts_time):
         color(f='Y', b='B', ff=False)
         line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-        line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True)
+        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
         back_c('B', False)
-        line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True, switch=True)
+        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
         back_c('B', False)
 
         color(f='Y', b='B', ff=False)
@@ -201,20 +256,22 @@ def section_15(firts_time):
 
         # Spaces:
         edge(y=7)
+        print((' ' * c.EDGE_X), end='')
         
         # Line:
-        line(back_c('W') + (' ' * 10), 5, intr=back_c('B') + (' ' * 10), x=c.EDGE_X, switch=True)
+        for j in range(len(track_line_init)):
+            print(track_line_init[j], end='', sep='')
 
         # Spaces:
-        edge(y=7)
+        edge(y=5)
 
         # Banner bottom:
         color(f='Y', b='B', ff=False)
         line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-        line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True)
+        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
         back_c('B', False)
-        line(black, floor(c.WIDHT / 2), intr=white, left=edges, x=c.EDGE_X, less=True, switch=True)
+        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
         back_c('B', False)
 
         color(f='Y', b='B', ff=False)

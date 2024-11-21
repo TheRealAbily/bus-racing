@@ -9,6 +9,9 @@ WIDHT = 100
 EXTRA_FIX = -2 # For lines
 GAME_MODE = 0
 
+# Track:
+TRACK = 0
+
 # Sounds:
 MUSIC = True
 SFX = True

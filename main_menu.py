@@ -25,6 +25,9 @@ def section_2():
     c.VEHICLE_PLAYER_1 = 0
     c.VEHICLE_PLAYER_2 = 0
     c.VEHICLE_PLAYER_CPU = 0
+
+    # Random track:
+    c.TRACK = randint(1, 4)
     
     # Clear the screen:
     clear()
