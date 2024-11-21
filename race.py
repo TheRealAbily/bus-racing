@@ -27,15 +27,14 @@ def section_15(firts_time):
     # Track color:
     if c.TRACK == 1:
         track_color = 'R'
-    if c.TRACK == 2:
+    elif c.TRACK == 2:
         track_color = 'Bl'
-    if c.TRACK == 3:
+    elif c.TRACK == 3:
         track_color = 'M'
     else:
         track_color = 'G'
     
     firts_color = (color(b=track_color) + '  ')
-
     
     # Track:
     track_line = [back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ', back_c('W') + ' ',
