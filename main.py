@@ -28,6 +28,7 @@ import select_cpu as s13
 import loading as s14
 import race as s15
 import lights as s16
+import save_load as s17
 
 # Start the program:
 while c.LOOP:
@@ -98,3 +99,6 @@ while c.LOOP:
     # Race:
     if c.SECTION == 16:
         s15.section_15(False)
+    
+    # Save the data:
+    s17.save_data()

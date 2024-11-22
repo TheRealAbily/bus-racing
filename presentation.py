@@ -7,6 +7,7 @@ from move import *
 from screen import *
 from text import *
 from sounds import *
+from save_load import *
 
 # Config:
 import config as c
@@ -20,6 +21,9 @@ distance_right = 17
 
 # Presentation:
 def section_1():
+    # Load the data:
+    load_data()
+
     # Clear the screen:
     clear()
 

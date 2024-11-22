@@ -15,7 +15,7 @@ TRACK = 0
 # Sounds:
 MUSIC = True
 SFX = True
-VOLUME_MUSIC = 0.15
+VOLUME_MUSIC = 0.75
 VOLUME_SFX = 0.75
 
 # Vehicles:
