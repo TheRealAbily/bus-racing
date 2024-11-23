@@ -52,7 +52,8 @@ def section_5():
     front_c('W') + 'Adjust the Y axis ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )',
     front_c('W') + 'Music volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_MUSIC * 100)}%' + front_c('W') + ' )',
     front_c('W') + 'SFX volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_SFX * 100)}%' + front_c('W') + ' )',
-    front_c('W') + 'Information of the program', 
+    front_c('W') + 'Information of the program',
+    front_c('W') + 'Restore default settings',
     front_c('W') + 'Return to menu']
 
     # Text (options):
@@ -72,7 +73,7 @@ def section_5():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 32)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 35)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -119,6 +120,16 @@ def section_5():
 
                 # SFX:
                 play_sfx('Go')
+
+            elif option == 6:
+                # Restore default settings:
+                c.VOLUME_MUSIC = 0.75
+                c.VOLUME_SFX = 0.75
+                c.EDGE_X = 4
+                c.EDGE_Y = 2
+
+                # SFX:
+                play_sfx('Edit')
 
             else:
                 # Menu:

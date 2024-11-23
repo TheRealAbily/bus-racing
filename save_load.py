@@ -16,6 +16,8 @@ def save_data():
     with open(path, "w") as file:
         file.write(f"Music={c.VOLUME_MUSIC}\n")
         file.write(f"SFX={c.VOLUME_SFX}\n")
+        file.write(f"EDGE_X={c.EDGE_X}\n")
+        file.write(f"EDGE_Y={c.EDGE_Y}\n")
 
 # Load system:
 def load_data():
@@ -24,16 +26,21 @@ def load_data():
     
     # Load function:
     if not os.path.exists(path):
-        return 0.75, 0.75
+        c.VOLUME_MUSIC = 0.75
+        c.VOLUME_SFX = 0.75
+        c.EDGE_X = 4
+        c.EDGE_Y = 2
     else:
         with open(path, "r") as file:
-            file = archivo.readlines()
+            content = file.readlines()
 
         # Read the data:
         data = {}
-        for line in contenido:
+        for line in content:
             key, value = line.strip().split("=")
             data[key] = value
 
-        c.VOLUME_MUSIC = data.get("Music", 0.75)
-        c.VOLUME_SFX = data.get("SFX", 0.75)
+        c.VOLUME_MUSIC = float(data.get("Music", 0.75))
+        c.VOLUME_SFX = float(data.get("SFX", 0.75))
+        c.EDGE_X = int(data.get("EDGE_X", 4))
+        c.EDGE_Y = int(data.get("EDGE_Y", 2))
