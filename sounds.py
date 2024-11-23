@@ -78,7 +78,7 @@ def play_music(music):
     pygame.mixer.music.set_volume(c.VOLUME_MUSIC)
 
     # Play:
-    pygame.mixer.music.play(-1)
+    #pygame.mixer.music.play(-1)
 
 # Stop:
 def stop_music():

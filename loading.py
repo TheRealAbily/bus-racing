@@ -24,6 +24,10 @@ def section_14():
     # Clear the screen:
     clear()
 
+    # Distance:
+    c.DISTANCE_PLAYER_1 = 0
+    c.DISTANCE_PLAYER_2 = 0
+
     # Banner top:
     color(f='Y', b='B', ff=False)
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X, y=c.EDGE_Y)

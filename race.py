@@ -7,6 +7,7 @@ from move import *
 from screen import *
 from text import *
 from sounds import *
+from draw_vehicles import *
 
 # Config:
 import config as c
@@ -79,7 +80,7 @@ def section_15(firts_time):
                 line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
 
                 # Spaces:
-                edge(y=7)
+                edge(y=8)
                 print((' ' * c.EDGE_X), end='')
 
                 # Line:
@@ -87,7 +88,7 @@ def section_15(firts_time):
                     print(track_line[j], end='', sep='')
                 
                 # Spaces:
-                edge(y=6)
+                edge(y=7)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
@@ -130,7 +131,7 @@ def section_15(firts_time):
                 line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
 
                 # Spaces:
-                edge(y=7)
+                edge(y=8)
                 
                 # Append:
                 if count < max_count:
@@ -158,7 +159,7 @@ def section_15(firts_time):
                     print(track_line[j], end='', sep='')
                 
                 # Spaces:
-                edge(y=6)
+                edge(y=7)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
@@ -206,7 +207,7 @@ def section_15(firts_time):
                 line('=', c.WIDHT + c.EXTRA_FIX, right='o', x=c.EDGE_X)
 
                 # Spaces:
-                edge(y=7)
+                edge(y=8)
                 print(' ' * c.EDGE_X, end='')
                 
                 # Line:
@@ -214,7 +215,7 @@ def section_15(firts_time):
                     print(track_line[j], end='', sep='')
                 
                 # Spaces:
-                edge(y=6)
+                edge(y=7)
 
                 # Banner bottom:
                 color(f='Y', b='B', ff=False)
@@ -238,6 +239,51 @@ def section_15(firts_time):
         c.SECTION = 15
 
     else:
+        # Set the same:
+        c.VEHICLE_PLAYER_2 = 5 # c.VEHICLE_PLAYER_CPU
+        
+        # Adjust player 1:
+        if c.VEHICLE_PLAYER_1 == 0:
+            adjust_player_1 = 7
+        elif c.VEHICLE_PLAYER_1 == 1:
+            adjust_player_1 = 11
+        elif c.VEHICLE_PLAYER_1 == 2:
+            adjust_player_1 = 2
+        elif c.VEHICLE_PLAYER_1 == 3:
+            adjust_player_1 = 10
+        elif c.VEHICLE_PLAYER_1 == 4:
+            adjust_player_1 = 2
+        else:
+            adjust_player_1 = 3
+        
+        # Adjust player 2:
+        if c.VEHICLE_PLAYER_2 == 0:
+            adjust_player_2 = 7
+        elif c.VEHICLE_PLAYER_2 == 1:
+            adjust_player_2 = 11
+        elif c.VEHICLE_PLAYER_2 == 2:
+            adjust_player_2 = 2
+        elif c.VEHICLE_PLAYER_2 == 3:
+            adjust_player_2 = 10
+        elif c.VEHICLE_PLAYER_2 == 4:
+            adjust_player_2 = 2
+        else:
+            adjust_player_2 = 3
+
+        # Vehicles:
+        line_player_1 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_1]]
+
+        # Vehicles:
+        line_player_2 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_2]]
+
         # Music:
         play_music('Track')
 
@@ -254,7 +300,16 @@ def section_15(firts_time):
         line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
 
         # Spaces:
-        edge(y=7)
+        edge(y=1)
+        
+        # Show the player 1:
+        for p in range(len(line_player_1)):
+            for t in range(len(line_player_1[0])):
+                print(line_player_1[p][t], end='', sep='')
+            print()
+
+        # Spaces:
+        edge(y=1)
         print((' ' * c.EDGE_X), end='')
         
         # Line:
@@ -262,11 +317,20 @@ def section_15(firts_time):
             print(track_line_init[j], end='', sep='')
 
         # Spaces:
-        edge(y=5)
+        edge(y=2)
+        
+        # Show the player 2:
+        for p in range(len(line_player_2)):
+            for t in range(len(line_player_2[0])):
+                print(line_player_2[p][t], end='', sep='')
+            print()
+
+        # Spaces:
+        edge(y=1)
 
         # Banner bottom:
         color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
+        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
 
         line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
         back_c('B', False)

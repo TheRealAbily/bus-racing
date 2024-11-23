@@ -1,4 +1,4 @@
-Music=0.75
-SFX=0.75
+Music=0.0
+SFX=0.0
 EDGE_X=4
 EDGE_Y=2

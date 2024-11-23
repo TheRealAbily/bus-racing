@@ -83,7 +83,7 @@ def section_5():
     try:
         option = int(option)
 
-        if not 1 <= option <= 6:
+        if not 1 <= option <= 7:
             raise ValueError
         else:
             if option == 1:
