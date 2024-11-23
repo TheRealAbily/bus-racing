@@ -359,4 +359,12 @@ def section_15(firts_time):
                 c.DISTANCE_PLAYER_2 += 1
                 
                 # FPS:
-                wait(1 / c.FPS)
+                wait(c.GAME_TICK)
+
+
+#  [3, 4, 4], # Car
+#  [4, 6, 3], # Motorcycle
+#  [2, 3, 8], # Bus
+#  [3, 7, 3], # Go kart
+#  [5, 5, 6], # Truck
+#  [6, 5, 10] # Monster truck
