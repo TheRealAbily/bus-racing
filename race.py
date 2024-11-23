@@ -8,6 +8,7 @@ from screen import *
 from text import *
 from sounds import *
 from draw_vehicles import *
+from random import randint
 
 # Config:
 import config as c
@@ -25,6 +26,10 @@ def section_15(firts_time):
     # Clear the screen:
     clear()
 
+    # Variables:
+    start_race = False
+    in_race = True
+    
     # Track color:
     if c.TRACK == 1:
         track_color = 'R'
@@ -240,7 +245,7 @@ def section_15(firts_time):
 
     else:
         # Set the same:
-        c.VEHICLE_PLAYER_2 = 5 # c.VEHICLE_PLAYER_CPU
+        c.VEHICLE_PLAYER_2 = c.VEHICLE_PLAYER_CPU
         
         # Adjust player 1:
         if c.VEHICLE_PLAYER_1 == 0:
@@ -269,74 +274,89 @@ def section_15(firts_time):
             adjust_player_2 = 2
         else:
             adjust_player_2 = 3
-
-        # Vehicles:
-        line_player_1 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_1]]
-
-        # Vehicles:
-        line_player_2 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                        [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_2]]
-
+        
         # Music:
         play_music('Track')
 
-        # Banner top:
-        color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
+        while in_race == True:
+            # Vehicles:
+            line_player_1 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_1]]
 
-        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
-        back_c('B', False)
-        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
-        back_c('B', False)
+            # Vehicles:
+            line_player_2 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_2]]
 
-        color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+            # Clear the screen:
+            clear()
 
-        # Spaces:
-        edge(y=1)
-        
-        # Show the player 1:
-        for p in range(len(line_player_1)):
-            for t in range(len(line_player_1[0])):
-                print(line_player_1[p][t], end='', sep='')
-            print()
+            # Banner top:
+            color(f='Y', b='B', ff=False)
+            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-        # Spaces:
-        edge(y=1)
-        print((' ' * c.EDGE_X), end='')
-        
-        # Line:
-        for j in range(len(track_line_init)):
-            print(track_line_init[j], end='', sep='')
+            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
+            back_c('B', False)
+            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
+            back_c('B', False)
 
-        # Spaces:
-        edge(y=2)
-        
-        # Show the player 2:
-        for p in range(len(line_player_2)):
-            for t in range(len(line_player_2[0])):
-                print(line_player_2[p][t], end='', sep='')
-            print()
+            color(f='Y', b='B', ff=False)
+            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
 
-        # Spaces:
-        edge(y=1)
+            # Spaces:
+            edge(y=1)
+            
+            # Show the player 1:
+            for p in range(len(line_player_1)):
+                for t in range(len(line_player_1[0])):
+                    print(line_player_1[p][t], end='', sep='')
+                print()
 
-        # Banner bottom:
-        color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+            # Spaces:
+            edge(y=1)
+            print((' ' * c.EDGE_X), end='')
+            
+            # Line:
+            for j in range(len(track_line_init)):
+                print(track_line_init[j], end='', sep='')
 
-        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
-        back_c('B', False)
-        line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
-        back_c('B', False)
+            # Spaces:
+            edge(y=2)
+            
+            # Show the player 2:
+            for p in range(len(line_player_2)):
+                for t in range(len(line_player_2[0])):
+                    print(line_player_2[p][t], end='', sep='')
+                print()
 
-        color(f='Y', b='B', ff=False)
-        line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
-        input()
+            # Spaces:
+            edge(y=1)
+
+            # Banner bottom:
+            color(f='Y', b='B', ff=False)
+            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+
+            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
+            back_c('B', False)
+            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
+            back_c('B', False)
+
+            color(f='Y', b='B', ff=False)
+            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+
+            # Race:
+            if start_race == False:
+                wait(1)
+                start_race = True
+            else:
+                # Run cars:
+                c.DISTANCE_PLAYER_1 += 1
+                c.DISTANCE_PLAYER_2 += 1
+                
+                # FPS:
+                wait(1 / c.FPS)

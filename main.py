@@ -29,7 +29,7 @@ import loading as s14
 import race as s15
 import lights as s16
 import save_load as s17
-c.SECTION = 16
+
 # Start the program:
 while c.LOOP:
     # Presentation:
