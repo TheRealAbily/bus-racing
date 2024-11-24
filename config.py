@@ -9,6 +9,7 @@ WIDHT = 100
 EXTRA_FIX = -2 # For lines
 GAME_MODE = 0
 GAME_TICK = 0.2
+ANIMATION_LINE_TRACK = False
 
 # Track:
 TRACK = 0
@@ -37,5 +38,9 @@ STATS = [ # Vehicles:
         [4, 6, 3], # Motorcycle
         [2, 3, 8], # Bus
         [3, 7, 3], # Go kart
-        [5, 5, 6], # Truck
+        [4, 5, 6], # Truck
         [6, 5, 10]] # Monster truck
+
+# Gameplay:
+MAX_ACCELERATION = 8
+MAX_WEIGHT = 15

@@ -244,9 +244,29 @@ def section_15(firts_time):
         c.SECTION = 15
 
     else:
+        track_lines = [back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ',
+                    back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ',
+                    back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ',
+                    back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ',
+                    # back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ',
+                    back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ',
+                    back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ',
+                    back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ',
+                    back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ',
+                    back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ',
+                    back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ']
+
         # Set the same:
-        c.VEHICLE_PLAYER_2 = c.VEHICLE_PLAYER_CPU
+        if c.GAME_MODE == 0:
+            c.VEHICLE_PLAYER_2 = c.VEHICLE_PLAYER_CPU
         
+        # Variables:
+        adjust_cars = -1
+        track_line_number = 0
+        distance_1 = 0
+        distance_2 = 0
+        switch = -1
+
         # Adjust player 1:
         if c.VEHICLE_PLAYER_1 == 0:
             adjust_player_1 = 7
@@ -280,33 +300,56 @@ def section_15(firts_time):
 
         while in_race == True:
             # Vehicles:
-            line_player_1 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_1]]
+            line_player_1 = [[(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_1],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_1 + adjust_player_1)), draw_vehicle(c.VEHICLE_PLAYER_1, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_1]]
 
             # Vehicles:
-            line_player_2 = [[(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
-                            [(' ' * (c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_2]]
+            line_player_2 = [[(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 0), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 1), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 2), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 3), ' ' * c.REMAINING_DISTANCE_PLAYER_2],
+                            [(' ' * round(c.EDGE_X + c.DISTANCE_PLAYER_2 + adjust_player_2)), draw_vehicle(c.VEHICLE_PLAYER_2, 4), ' ' * c.REMAINING_DISTANCE_PLAYER_2]]
 
             # Clear the screen:
             clear()
 
             # Banner top:
-            color(f='Y', b='B', ff=False)
-            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
+            if switch == -1:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X, y=2)
 
-            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
-            back_c('B', False)
-            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
-            back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
 
-            color(f='Y', b='B', ff=False)
-            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+            elif switch == 0:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X, y=2)
+
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
+                back_c('B', False)
+
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
+            else:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X, y=2)
+
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
+
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
 
             # Spaces:
             edge(y=1)
@@ -322,8 +365,19 @@ def section_15(firts_time):
             print((' ' * c.EDGE_X), end='')
             
             # Line:
-            for j in range(len(track_line_init)):
-                print(track_line_init[j], end='', sep='')
+            # for j in range(len(track_line_init)):
+            #     print(track_line_init[j], end='', sep='')
+            # back_c('B', False)
+
+            # Line:
+            print(track_lines[track_line_number], end='', sep='')
+            back_c('B', False)
+
+            if switch >= 0:
+                if track_line_number < len(track_lines) - 1:
+                    track_line_number += 1
+                else:
+                    track_line_number = 0
 
             # Spaces:
             edge(y=2)
@@ -338,33 +392,96 @@ def section_15(firts_time):
             edge(y=1)
 
             # Banner bottom:
-            color(f='Y', b='B', ff=False)
-            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+            if switch == -1:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
 
-            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
-            back_c('B', False)
-            line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
-            back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, left=edges, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
 
-            color(f='Y', b='B', ff=False)
-            line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+            elif switch == 0:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
+
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
+                back_c('B', False)
+
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
+            else:
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
+
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True)
+                back_c('B', False)
+                line(firts_color, floor(c.WIDHT / 2), intr=second_color, x=c.EDGE_X, less=True, switch=True)
+                back_c('B', False)
+
+                color(f='Y', b='B', ff=False)
+                line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
+
+            # Switch:
+            if switch == 1:
+                switch = 0
+            else:
+                switch = 1
 
             # Race:
             if start_race == False:
                 wait(1)
                 start_race = True
             else:
-                # Run cars:
-                c.DISTANCE_PLAYER_1 += 1
-                c.DISTANCE_PLAYER_2 += 1
+                # Run player 1:
+                if 1 <= randint(1, c.MAX_ACCELERATION) <= c.STATS[c.VEHICLE_PLAYER_1][1]:
+                    if 1 <= randint(1, c.STATS[c.VEHICLE_PLAYER_1][2]) <= c.MAX_WEIGHT:
+                        c.DISTANCE_PLAYER_1 += (c.STATS[c.VEHICLE_PLAYER_1][0] / 2)
+                        distance_1 = (c.STATS[c.VEHICLE_PLAYER_1][0] / 2)
+                    else:
+                        c.DISTANCE_PLAYER_1 += c.STATS[c.VEHICLE_PLAYER_1][0]
+                        distance_1 = c.STATS[c.VEHICLE_PLAYER_1][0]
+
+                # Run player 2:
+                if 1 <= randint(1, c.MAX_ACCELERATION) <= c.STATS[c.VEHICLE_PLAYER_2][1]:
+                    if 1 <= randint(1, c.STATS[c.VEHICLE_PLAYER_2][2]) <= c.MAX_WEIGHT:
+                        c.DISTANCE_PLAYER_2 += (c.STATS[c.VEHICLE_PLAYER_2][0] / 2)
+                        distance_2 = (c.STATS[c.VEHICLE_PLAYER_2][0] / 2)
+                    else:
+                        c.DISTANCE_PLAYER_2 += c.STATS[c.VEHICLE_PLAYER_2][0]
+                        distance_2 = c.STATS[c.VEHICLE_PLAYER_2][0]
                 
+                # Adjust:
+                if adjust_cars < 0:
+                    if c.DISTANCE_PLAYER_1 > 50 and c.DISTANCE_PLAYER_2 > 30 or c.DISTANCE_PLAYER_2 > 50 and c.DISTANCE_PLAYER_1 > 30:
+                        adjust_cars = 40
+
+                        if switch == -1:
+                            switch = 0
+                elif adjust_cars >= 0:
+                    c.DISTANCE_PLAYER_1 -= 2
+                    c.DISTANCE_PLAYER_2 -= 2
+                    adjust_cars -= 2
+
+                # Line:
+                if c.DISTANCE_PLAYER_1 > 25 and c.DISTANCE_PLAYER_2 > 25 and c.ANIMATION_LINE_TRACK == True:
+                    for p in range(max(round(distance_1), round(distance_2))):
+                        if track_line_count < 10:
+                            track_line_count += 1
+                        else:
+                            track_line_count = 0
+
+                            if track_line_color == 'B':
+                                track_line_color = 'W'
+                            else:
+                                track_line_color = 'B'
+                        
+                        track_line_init.append(back_c(track_line_color) + ' ')
+                        track_line_init.pop(0)
+
                 # FPS:
                 wait(c.GAME_TICK)
-
-
-#  [3, 4, 4], # Car
-#  [4, 6, 3], # Motorcycle
-#  [2, 3, 8], # Bus
-#  [3, 7, 3], # Go kart
-#  [5, 5, 6], # Truck
-#  [6, 5, 10] # Monster truck
