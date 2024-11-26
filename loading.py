@@ -82,7 +82,7 @@ def section_14():
     pos(x=0, y=c.EDGE_Y + 16)
 
     # Line text:
-    text(color(f='W', b='B', s='B') + ' - Press ' + front_c('G') + '<enter>' + front_c('W') + ' to continue -  ', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (34 * 2), distance_1=0, distance_2=0, x=c.EDGE_X)
+    text(color(f='W', b='B', s='B') + ' - Press ' + front_c('G') + styles_c('B') + '<enter>' + front_c('W') + styles_c('N') + ' to continue -  ', points=color(f='Y', b='B', s='N') + '||', intr=' ', distance=c.WIDHT - (34 * 2), distance_1=0, distance_2=0, x=c.EDGE_X)
 
     # Move the cursor:
     pos(x=c.EDGE_X + 66, y=c.EDGE_Y + 16)

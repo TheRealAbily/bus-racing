@@ -23,14 +23,14 @@ import edit_edge_x as s8
 import edit_edge_y as s9
 import edit_volume_music as s10
 import edit_volume_sfx as s11
-import exit_game as s122
+import exit_game as s12
 import select_cpu as s13
 import loading as s14
 import race as s15
 import lights as s16
 import save_load as s17
 import winner as s18
-c.SECTION = 17
+
 # Start the program:
 while c.LOOP:
     # Presentation:

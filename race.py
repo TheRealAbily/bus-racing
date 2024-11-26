@@ -592,7 +592,7 @@ def section_15(firts_time):
                     stop_adjust = True
                     
                     # Spaces deleted:
-                    if spaces_delete < 6:
+                    if spaces_delete < 10:
                         # Distance:
                         if (c.DISTANCE_PLAYER_1 - 2) >= 0:
                             c.DISTANCE_PLAYER_1 -= 2
