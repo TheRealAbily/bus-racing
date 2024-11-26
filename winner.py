@@ -14,7 +14,6 @@ from vehicles import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 30
@@ -22,6 +21,9 @@ distance_right = 17
 
 # Winner:
 def section_18():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Clear the screen:
     clear()
 
@@ -29,6 +31,9 @@ def section_18():
     if c.WINNER == 0:
         winner = 'Player 1'
         vehicle = c.VEHICLE_PLAYER_1
+
+        if c.GAME_MODE == 0:
+            c.WINS_TO_CPU += 1
     else:
         if c.GAME_MODE == 0:
             winner = 'The CPU'

@@ -31,6 +31,7 @@ import lights as s16
 import save_load as s17
 import winner as s18
 import songs as s19
+import edit_track_color as s20
 
 # Start the program:
 while c.LOOP:
@@ -109,6 +110,10 @@ while c.LOOP:
     # Songs:
     if c.SECTION == 18:
         s19.section_19()
+
+    # Edit track line color:
+    if c.SECTION == 19:
+        s20.section_20()
     
     # Save the data:
     s17.save_data()

@@ -12,7 +12,6 @@ from sounds import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 26
@@ -21,6 +20,9 @@ option = ''
 
 # Options:
 def section_5():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Clear the screen:
     clear()
 
@@ -52,7 +54,7 @@ def section_5():
     front_c('W') + 'Adjust the Y axis ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )',
     front_c('W') + 'Music volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_MUSIC * 100)}%' + front_c('W') + ' )',
     front_c('W') + 'SFX volume ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.VOLUME_SFX * 100)}%' + front_c('W') + ' )',
-    front_c('W') + 'Information of the program',
+    front_c('W') + 'Track line color ( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{c.TRACK_LINE_COLOR}' + front_c('W') + ' )',
     front_c('W') + 'Restore default settings',
     front_c('W') + 'Return to menu']
 
@@ -115,8 +117,8 @@ def section_5():
                 play_sfx('Go')
 
             elif option == 5:
-                # Information:
-                c.SECTION = 6
+                # Edit track line color:
+                c.SECTION = 19
 
                 # SFX:
                 play_sfx('Go')
@@ -127,6 +129,7 @@ def section_5():
                 c.VOLUME_SFX = 0.75
                 c.EDGE_X = 4
                 c.EDGE_Y = 2
+                c.TRACK_LINE_COLOR = 'B'
 
                 # SFX:
                 play_sfx('Edit')

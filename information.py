@@ -12,7 +12,6 @@ from sounds import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 13
@@ -20,6 +19,9 @@ distance_right = 0
 
 # Information:
 def section_7():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Clear the screen:
     clear()
 
@@ -100,4 +102,4 @@ def section_7():
     play_sfx('Back')
 
     # Variable:
-    c.SECTION = 4
+    c.SECTION = 1

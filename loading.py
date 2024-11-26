@@ -13,7 +13,6 @@ from random import randint
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 17
@@ -21,6 +20,9 @@ distance_right = 17
 
 # Loading:
 def section_14():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Clear the screen:
     clear()
 

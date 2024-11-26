@@ -12,7 +12,6 @@ from sounds import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 28
@@ -21,6 +20,9 @@ option = ''
 
 # Edit volume (SFX):
 def section_11():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Clear the screen:
     clear()
 

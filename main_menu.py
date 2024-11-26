@@ -12,7 +12,6 @@ from sounds import *
 import config as c
 
 # Variables:
-black = (color(b='B') + '  ')
 white = (color(b='W') + '  ')
 edges = (front_c('Y') + back_c('B') + '|')
 distance_left = 19
@@ -21,6 +20,9 @@ option = ''
 
 # Main menu:
 def section_2():
+    # Track line color:
+    black = (color(b=c.TRACK_LINE_COLOR) + '  ')
+    
     # Reset the variables:
     c.VEHICLE_PLAYER_1 = 0
     c.VEHICLE_PLAYER_2 = 0
@@ -58,6 +60,7 @@ def section_2():
     'Start the game (' + front_c('Y') + ' 2 ' + front_c('C') + 'Player' + front_c('W') + ' )',
     'Songs',
     'Options',
+    'Information of the program',
     'Exit of the game']
 
     # Text (options):
@@ -77,7 +80,7 @@ def section_2():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 32)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -87,7 +90,7 @@ def section_2():
     try:
         option = int(option)
 
-        if not 1 <= option <= 5:
+        if not 1 <= option <= 6:
             raise ValueError
         else:
             # 1 Player:
@@ -107,6 +110,13 @@ def section_2():
             # Options:
             elif option == 4:
                 c.SECTION = 4
+            
+            # Options:
+            elif option == 4:
+                c.SECTION = 4
+
+            elif option == 5:
+                c.SECTION = 6
 
             # Exit:
             else:

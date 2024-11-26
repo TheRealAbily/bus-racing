@@ -171,7 +171,7 @@ def section_15(firts_time):
 
                 # Track name:
                 edge(y=2)
-                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' - ', end='', sep='')
 
                 # Time:
                 wait(2)
@@ -237,7 +237,7 @@ def section_15(firts_time):
 
                 # Track name:
                 edge(y=2)
-                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' - ', end='', sep='')
 
                 # Time:
                 wait(0.075) # 7.5
@@ -291,7 +291,7 @@ def section_15(firts_time):
 
                 # Track name:
                 edge(y=2)
-                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' - ', end='', sep='')
                         
                 # Goal:
                 back_c('B', False)
