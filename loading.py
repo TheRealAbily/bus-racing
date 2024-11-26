@@ -27,6 +27,7 @@ def section_14():
     # Distance:
     c.DISTANCE_PLAYER_1 = 0
     c.DISTANCE_PLAYER_2 = 0
+    probability = 0
 
     # Banner top:
     color(f='Y', b='B', ff=False)
@@ -112,7 +113,7 @@ def section_14():
     volume()
 
     # Random track:
-    c.TRACK = randint(1, 4)
+    c.TRACK = randint(1, c.MAX_TRACKS_COUNT)
 
     # Clear:
     clear()

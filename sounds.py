@@ -57,22 +57,55 @@ def play_music(music):
     # Music:
     if music == 'Main menu':
         pygame.mixer.music.load("resources/sounds/title_screen.mp3")
+    elif music == 'Winning idle':
+        pygame.mixer.music.load("resources/sounds/winning_idle.mp3")
     elif music == 'Track':
         if c.TRACK == 1:
-            # 8
+            # Figure 8:
             pygame.mixer.music.load("resources/sounds/track_1.mp3")
 
         elif c.TRACK == 2:
-            # Delfino
+            # Delfino Square:
             pygame.mixer.music.load("resources/sounds/track_2.mp3")
 
         elif c.TRACK == 3:
-            # Pinball
+            # Waluigi Pinball:
             pygame.mixer.music.load("resources/sounds/track_3.mp3")
 
-        else:
-            # Rainbow road
+        elif c.TRACK == 4:
+            # Rainbow Road:
             pygame.mixer.music.load("resources/sounds/track_4.mp3")
+
+        elif c.TRACK == 5:
+            # Desert Hills:
+            pygame.mixer.music.load("resources/sounds/track_5.mp3")
+
+        elif c.TRACK == 6:
+            # Sky Garden:
+            pygame.mixer.music.load("resources/sounds/track_6.mp3")
+
+        elif c.TRACK == 7:
+            # Bowser Castle:
+            pygame.mixer.music.load("resources/sounds/track_7.mp3")
+
+        elif c.TRACK == 8:
+            # Wario Stadium:
+            pygame.mixer.music.load("resources/sounds/track_3.mp3")
+
+        elif c.TRACK == 9:
+            # Peach Gardens:
+            pygame.mixer.music.load("resources/sounds/track_9.mp3")
+
+        elif c.TRACK == 10:
+            # Yoshi Falls:
+            pygame.mixer.music.load("resources/sounds/track_10.mp3")
+
+        else:
+            # Tokyo Drift:
+            pygame.mixer.music.load("resources/sounds/track_8.mp3")
+    else:
+        # Easter Egg:
+        pygame.mixer.music.load("resources/sounds/easter_egg.mp3")
         
     # Volume:
     pygame.mixer.music.set_volume(c.VOLUME_MUSIC)
@@ -109,6 +142,8 @@ def play_sfx(sfx):
         effect = pygame.mixer.Sound("resources/sounds/selected.wav")
     elif sfx == 'Car passing':
         effect = pygame.mixer.Sound("resources/sounds/car_passing.wav")
+    elif sfx == 'Winning start':
+        effect = pygame.mixer.Sound("resources/sounds/winning_start.wav")
     elif sfx == 'Show race track':
         selection = randint(1, 2)
 

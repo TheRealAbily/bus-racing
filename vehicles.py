@@ -182,7 +182,7 @@ def show_vehicle(vehicle, distance = 0, show_stats = True, **options):
         else:
             print()
     
-    # Monster car:
+    # Monster truck:
     if vehicle == 5:
         print((' ' * (edge_x + distance)), "", sep='')
 
