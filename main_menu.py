@@ -25,6 +25,7 @@ def section_2():
     c.VEHICLE_PLAYER_1 = 0
     c.VEHICLE_PLAYER_2 = 0
     c.VEHICLE_PLAYER_CPU = 0
+    c.CHANGE_SONG = False
     
     # Clear the screen:
     clear()
@@ -55,6 +56,7 @@ def section_2():
     # Text phrases:
     text_phrase = ['Start the game ( ' + front_c('C') + 'Player' + front_c('Y') + ' vs. ' + front_c('G') + 'CPU' + front_c('W') + ' )',
     'Start the game (' + front_c('Y') + ' 2 ' + front_c('C') + 'Player' + front_c('W') + ' )',
+    'Songs',
     'Options',
     'Exit of the game']
 
@@ -75,7 +77,7 @@ def section_2():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 26)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 29)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -85,7 +87,7 @@ def section_2():
     try:
         option = int(option)
 
-        if not 1 <= option <= 4:
+        if not 1 <= option <= 5:
             raise ValueError
         else:
             # 1 Player:
@@ -98,8 +100,12 @@ def section_2():
                 c.SECTION = 2
                 c.GAME_MODE = 1
             
-            # Options:
+            # Songs:
             elif option == 3:
+                c.SECTION = 18
+            
+            # Options:
+            elif option == 4:
                 c.SECTION = 4
 
             # Exit:

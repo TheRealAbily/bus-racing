@@ -16,7 +16,7 @@ import presentation as s1
 import main_menu as s2
 import select_player_1 as s3
 import select_player_2 as s4
-import options_menu as s5
+import options as s5
 import exit_menu as s6
 import information as s7
 import edit_edge_x as s8
@@ -30,6 +30,7 @@ import race as s15
 import lights as s16
 import save_load as s17
 import winner as s18
+import songs as s19
 
 # Start the program:
 while c.LOOP:
@@ -104,6 +105,10 @@ while c.LOOP:
     # Winner:
     if c.SECTION == 17:
         s18.section_18()
+    
+    # Songs:
+    if c.SECTION == 18:
+        s19.section_19()
     
     # Save the data:
     s17.save_data()

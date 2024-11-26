@@ -113,6 +113,9 @@ def section_15(firts_time):
         back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ',
         back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ']
 
+    # Names:
+    track_names = ['Figure 8', 'Delfino Square', 'Waluigi Painball', 'Rainbow Road', 'Desert Hills', 'Sky Garden', 'Bowser Castle', 'Peach Garden', 'Yoshi Falls', 'Tokyo Drift']
+    
     # Only see:
     if firts_time == True:
         # Variables:
@@ -165,6 +168,10 @@ def section_15(firts_time):
 
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, left='o', x=c.EDGE_X)
+
+                # Track name:
+                edge(y=2)
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
 
                 # Time:
                 wait(2)
@@ -228,6 +235,10 @@ def section_15(firts_time):
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, x=c.EDGE_X)
 
+                # Track name:
+                edge(y=2)
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
+
                 # Time:
                 wait(0.075) # 7.5
 
@@ -277,6 +288,10 @@ def section_15(firts_time):
 
                 color(f='Y', b='B', ff=False)
                 line('=', c.WIDHT + c.EXTRA_FIX, right='o', x=c.EDGE_X)
+
+                # Track name:
+                edge(y=2)
+                print((' ' * (c.EDGE_X + 36)), front_c('Y') + styles_c('B') + '- Track: ' + front_c('W') + track_names[c.TRACK - 1] + ' ', end='', sep='')
                         
                 # Goal:
                 back_c('B', False)
