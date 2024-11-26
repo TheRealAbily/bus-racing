@@ -113,7 +113,7 @@ def section_14():
     volume()
 
     # Random track:
-    c.TRACK = randint(1, c.MAX_TRACKS_COUNT)
+    c.TRACK = 11 # randint(1, c.MAX_TRACKS_COUNT)
 
     # Clear:
     clear()
