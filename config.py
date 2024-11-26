@@ -16,7 +16,7 @@ EASTER_EGG_PROBABILITY_1 = 5
 TRACK = 1
 MAX_TRACKS_COUNT = 11
 RACE_TIME = 0
-MAX_RACE_TIME = 5
+MAX_RACE_TIME = 15
 WINNER = 0
 
 # Sounds:
@@ -44,7 +44,7 @@ STATS = [ # Vehicles:
         [2, 3, 8], # Bus
         [3, 7, 3], # Go kart
         [4, 5, 6], # Truck
-        [6, 5, 10]] # Monster truck
+        [5, 4, 9]] # Monster truck
 
 # Gameplay:
 MAX_ACCELERATION = 8

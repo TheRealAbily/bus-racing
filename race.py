@@ -282,7 +282,7 @@ def section_15(firts_time):
                 back_c('B', False)
                 switch_goal = False
 
-                for r in range(15):
+                for r in range(17):
                     pos(x=c.EDGE_X + 95, y=c.EDGE_Y + 5 + r)
 
                     if switch_goal == False:
@@ -291,6 +291,8 @@ def section_15(firts_time):
                     else:
                         print(front_c('W') + back_c('B') + '|' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
                         switch_goal = False
+                
+                pos(x=c.EDGE_X, y=c.EDGE_Y + 15)
 
                 # Time:
                 wait(3)
@@ -316,6 +318,9 @@ def section_15(firts_time):
         stop_animation = False
         stop_move = False
         spaces_delete = 0
+
+        # Reset time:
+        c.RACE_TIME = 0
         
         # Adjust player 1:
         if c.VEHICLE_PLAYER_1 == 0:
