@@ -10,7 +10,7 @@ EXTRA_FIX = -2 # For lines
 GAME_MODE = 0
 GAME_TICK = 0.1
 ANIMATION_LINE_TRACK = False
-EASTER_EGG_PROBABILITY_1 = 100
+EASTER_EGG_PROBABILITY_1 = 15
 
 # Track:
 TRACK = 1
@@ -41,7 +41,7 @@ REMAINING_DISTANCE_PLAYER_2 = 0
 STATS = [ # Vehicles:
         [3, 4, 4], # Car
         [4, 6, 3], # Motorcycle
-        [3, 4, 8], # Bus
+        [4, 4, 8], # Bus
         [3, 7, 3], # Go kart
         [4, 5, 6], # Truck
         [5, 4, 9]] # Monster truck
