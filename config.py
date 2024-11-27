@@ -1,9 +1,10 @@
 # Variable initialization:
 
 # General:
+ADJUST_SCREEN = 0
 EDGE_X = 4
 EDGE_Y = 2
-SECTION = 0
+SECTION = -1
 LOOP = True
 WIDHT = 100
 EXTRA_FIX = -2 # For lines

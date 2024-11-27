@@ -14,6 +14,7 @@ def save_data():
 
     # Save function:
     with open(path, "w") as file:
+        file.write(f"ADJUST_SCREEN={c.ADJUST_SCREEN}\n")
         file.write(f"MUSIC={c.VOLUME_MUSIC}\n")
         file.write(f"SFX={c.VOLUME_SFX}\n")
         file.write(f"EDGE_X={c.EDGE_X}\n")
@@ -28,6 +29,7 @@ def load_data():
     
     # Load function:
     if not os.path.exists(path):
+        c.ADJUST_SCREEN = 0
         c.VOLUME_MUSIC = 0.75
         c.VOLUME_SFX = 0.75
         c.EDGE_X = 4
@@ -44,6 +46,7 @@ def load_data():
             key, value = line.strip().split("=")
             data[key] = value
 
+        c.ADJUST_SCREEN = int(data.get("ADJUST_SCREEN", 0))
         c.VOLUME_MUSIC = float(data.get("MUSIC", 0.75))
         c.VOLUME_SFX = float(data.get("SFX", 0.75))
         c.EDGE_X = int(data.get("EDGE_X", 4))

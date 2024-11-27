@@ -125,6 +125,7 @@ def section_5():
 
             elif option == 6:
                 # Restore default settings:
+                c.ADJUST_SCREEN = 0
                 c.VOLUME_MUSIC = 0.75
                 c.VOLUME_SFX = 0.75
                 c.EDGE_X = 4

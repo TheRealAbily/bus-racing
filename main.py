@@ -12,6 +12,7 @@ from sounds import *
 import config as c
 
 # Program:
+import adjust_screen as s0
 import presentation as s1
 import main_menu as s2
 import select_player_1 as s3
@@ -35,6 +36,10 @@ import edit_track_color as s20
 
 # Start the program:
 while c.LOOP:
+    # Adjust screen:
+    if c.SECTION == -1:
+        s0.section_0()
+    
     # Presentation:
     if c.SECTION == 0:
         s1.section_1()
