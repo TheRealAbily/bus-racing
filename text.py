@@ -33,25 +33,19 @@ def text(text, **options):
     if 'y' in options:
         edge_y = options.get('y', 0)
 
-        if isinstance(edge_y, int):
-            if edge_y > 0:
-                edge_y = '\n' * edge_y
-        else:
-            edge_y = ''
+        if not isinstance(edge_y, int):
+            edge_y = 0
     else:
-        edge_y = ''
+        edge_y = 0
         
     # Edge X:
     if 'x' in options:
         edge_x = options.get('x', 0)
         
-        if isinstance(edge_x, int):
-            if edge_x > 0:
-                edge_x = ' ' * edge_x
-        else:
-            edge_x = ''
+        if not isinstance(edge_x, int):
+            edge_x = 0
     else:
-        edge_x = ''
+        edge_x = 0
     
     # Start and end symbols:
     if 'points' in options:
@@ -101,4 +95,4 @@ def text(text, **options):
         next_line = 1
     
     # Show the text:
-    print(edge_y, edge_x, symbol_end, (symbol_intr * (distance + distance_1)), text, (symbol_intr * (distance + distance_2)), symbol_end, end=('\n' * next_line), sep='')
+    print(' ' * edge_y, ' ' * edge_x, symbol_end, (symbol_intr * (distance + distance_1)), text, (symbol_intr * (distance + distance_2)), symbol_end, end=('\n' * next_line), sep='')

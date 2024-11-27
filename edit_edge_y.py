@@ -52,7 +52,7 @@ def section_9():
     # Text:
     text(front_c('W') + styles_c('B') + '- Enter the new value of the' + front_c('Y') + ' Y axis ' + front_c('W') + '( ' + front_c('C') + 'Current: ' + front_c('Y') + f'{round(c.EDGE_Y)}' + front_c('W') + ' )' + styles_c('N'), x=c.EDGE_X + 25, next=3)
 
-    print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('B') + '- ' + front_c('G') + 'New value ' + front_c('W') + '( ' + front_c('C') + 'Min: ' + front_c('Y') + '1' + front_c('W') + ' - ' + front_c('C') + 'Max: ' + front_c('Y') + '30' + front_c('W') + ' ): ' + styles_c('N') + front_c('W'), end='', sep='')
+    print((' ' * (c.EDGE_X + 28)), front_c('W') + styles_c('B') + '- ' + front_c('G') + 'New value ' + front_c('W') + '( ' + front_c('C') + 'Min: ' + front_c('Y') + '0' + front_c('W') + ' - ' + front_c('C') + 'Max: ' + front_c('Y') + '30' + front_c('W') + ' ): ' + styles_c('N') + front_c('W'), end='', sep='')
     
     # Banner bottom:
     color(f='Y', b='B', ff=False)
@@ -75,7 +75,7 @@ def section_9():
     try:
         option = int(option)
 
-        if not 1 <= option <= 30:
+        if not 0 <= option <= 30:
             raise ValueError
         else:
             # Edit value:
