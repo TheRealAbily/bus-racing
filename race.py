@@ -114,7 +114,7 @@ def section_15(firts_time):
         back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ' + back_c('B') + ' ']
 
     # Names:
-    track_names = ['Figure 8', 'Delfino Square', 'Waluigi Painball', 'Rainbow Road', 'Desert Hills', 'Sky Garden', 'Bowser Castle', 'Peach Garden', 'Yoshi Falls', 'Tokyo Drift']
+    track_names = ['Figure 8', 'Delfino Square', 'Waluigi Painball', 'Rainbow Road', 'Desert Hills', 'Sky Garden', 'Bowser Castle', 'Wario Stadium', 'Peach Garden', 'Yoshi Falls', 'Tokyo Drift']
     
     # Only see:
     if firts_time == True:
@@ -268,7 +268,6 @@ def section_15(firts_time):
 
                 # Spaces:
                 edge(y=8)
-                print(' ' * c.EDGE_X, end='')
 
                 # Line:
                 print(' ' * c.EDGE_X, track_lines[track_line_number], end='', sep='')
@@ -307,7 +306,7 @@ def section_15(firts_time):
                         print(front_c('W') + back_c('B') + '|' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
                         switch_goal = False
                 
-                pos(x=c.EDGE_X, y=c.EDGE_Y + 15)
+                pos(x=c.EDGE_X, y=c.EDGE_Y + 28)
 
                 # Time:
                 wait(3)
@@ -333,6 +332,8 @@ def section_15(firts_time):
         stop_animation = False
         stop_move = False
         spaces_delete = 0
+        switch_spaces_delete = 0
+        ticks = 0
 
         # Reset time:
         c.RACE_TIME = 0
@@ -582,18 +583,33 @@ def section_15(firts_time):
                             for l in range(5):
                                 distance = (5 - l) * 10
                                 adjust_cars = -1
-
+                                
                                 if c.DISTANCE_PLAYER_1 > distance and c.DISTANCE_PLAYER_2 > distance:
-                                    adjust_cars = distance
+                                    if distance == 10 and switch_spaces_delete < 3:
+                                        switch_spaces_delete += 1
+                                        adjust_cars = distance + 5
+
+                                    elif distance == 20 and 3 <= switch_spaces_delete < 5:
+                                        switch_spaces_delete += 1
+                                        adjust_cars = distance + 10
+
+                                    elif distance == 30 and switch_spaces_delete == 5:
+                                        switch_spaces_delete = 0
+                                        adjust_cars = distance + 25
                                     break
+                                    
+                                if ticks == 10 and 3 <= switch_spaces_delete < 5:
+                                    switch_spaces_delete = 0
+                                elif ticks == 15 and switch_spaces_delete == 5:
+                                    switch_spaces_delete = 0
 
                             if switch == -1:
                                 switch = 0
                         
                         elif adjust_cars >= 0:
-                            if (c.DISTANCE_PLAYER_1 - 2) >= 0 and (c.DISTANCE_PLAYER_2 - 2) >= 0:
-                                c.DISTANCE_PLAYER_1 -= 2
-                                c.DISTANCE_PLAYER_2 -= 2
+                            if (c.DISTANCE_PLAYER_1 - 3) >= 0 and (c.DISTANCE_PLAYER_2 - 3) >= 0:
+                                c.DISTANCE_PLAYER_1 -= 3
+                                c.DISTANCE_PLAYER_2 -= 3
                                 adjust_cars -= 2
                             else:
                                 adjust_cars = -1
@@ -612,19 +628,19 @@ def section_15(firts_time):
                     stop_adjust = True
                     
                     # Spaces deleted:
-                    if spaces_delete < 10:
+                    if spaces_delete < 15:
                         # Distance:
-                        if (c.DISTANCE_PLAYER_1 - 2) >= 0:
-                            c.DISTANCE_PLAYER_1 -= 2
+                        if (c.DISTANCE_PLAYER_1 - 3) >= 0:
+                            c.DISTANCE_PLAYER_1 -= 3
                         
-                        if (c.DISTANCE_PLAYER_2 - 2) >= 0:
-                            c.DISTANCE_PLAYER_2 -= 2
+                        if (c.DISTANCE_PLAYER_2 - 3) >= 0:
+                            c.DISTANCE_PLAYER_2 -= 3
                         
                         # Limits:
                         c.DISTANCE_PLAYER_1 = clamp(c.DISTANCE_PLAYER_1, 0, 74)
                         c.DISTANCE_PLAYER_2 = clamp(c.DISTANCE_PLAYER_2, 0, 74)
                         
-                        spaces_delete += 2
+                        spaces_delete += 3
                     else:
                         stop_animation = True
                         
@@ -658,6 +674,7 @@ def section_15(firts_time):
                 # FPS:
                 if stop_move == False:
                     wait(c.GAME_TICK)
+                    ticks += 1
                 else:
                     # Position:
                     pos(x=c.EDGE_X, y=c.EDGE_Y + 25)

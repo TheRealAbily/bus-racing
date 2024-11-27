@@ -84,7 +84,7 @@ def section_20():
     
     # Try converting the value to int (this worked first time):
     try:
-        if option != 'R' and option != 'G' and option != 'Y' and option != 'Bl' and option != 'M' and option != 'C' and option != 'B' and option != 'W':
+        if option != 'R' and option != 'G' and option != 'Y' and option != 'BL' and option != 'M' and option != 'C' and option != 'B' and option != 'W':
             raise ValueError
         else:
             # Edit value:

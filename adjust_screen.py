@@ -28,10 +28,12 @@ def section_0():
         distance_x = 20
         distance_y = 26
         lines = 10
-
+        
         # Corner:
-        print(back_c('W') + (' ' * lines), end='', sep='')
-        print(back_c('W') + (' \n' * (lines - 4)) + back_c('B'), end='', sep='')
+        print(back_c('B') + (' ' * c.EDGE_X) + back_c('W') + (' ' * (lines + 1)), sep='')
+
+        for t in range(lines - 4):
+            print(back_c('B') + (' ' * c.EDGE_X) + back_c('W') + (' \n') + back_c('B'), end='', sep='')
 
         # Spaces:
         edge(y=round(distance_y/2))
@@ -50,12 +52,13 @@ def section_0():
 
         # Corner:
         for i in range(lines - 4):
-            print(back_c('B') + (' ' * (c.WIDHT + 5)) + back_c('W') + ' ', sep='')
-        print(back_c('B') + (' ' * (c.WIDHT - lines + 5)) + back_c('W') + (' ' * (lines + 1)), end='', sep='')
+            print((' ' * c.EDGE_X) + back_c('B') + (' ' * (c.WIDHT + 5)) + back_c('W') + ' ', sep='')
+            print(back_c('B'), end='', sep='')
+        print((' ' * c.EDGE_X) + back_c('B') + (' ' * (c.WIDHT - lines + 5)) + back_c('W') + (' ' * (lines + 1)), end='', sep='')
         back_c('B', False)
         
         # Move the cursor:
-        pos(x=c.EDGE_X + distance_x + 42, y=round(distance_y/2) + 12)
+        pos(x=c.EDGE_X + distance_x + 42, y=round(distance_y/2) + 13)
 
         # Reset the colors:
         color(f='-', b='-', s='-', ff=False)
@@ -64,7 +67,7 @@ def section_0():
         option = input()
 
         # Move the cursor:
-        pos(x=c.EDGE_X + distance_x + 43, y=round(distance_y/2) + 12)
+        pos(x=c.EDGE_X + distance_x + 43, y=round(distance_y/2) + 13)
 
         # Check the option:
         try:

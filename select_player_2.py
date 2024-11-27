@@ -74,7 +74,7 @@ def section_4():
     edge(y=2)
     
     # Text phrases:
-    text_phrase = [front_c('Y') + '- Current vehicle of the player 2: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_2]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to menu']
+    text_phrase = [front_c('Y') + '- Current vehicle of the player 2: ' + front_c('C') + f'{vehicles[c.VEHICLE_PLAYER_2]}', 'Next vehicle', 'Previous vehicle', 'Select vehicle', 'Return to player 1 selection', 'Return to menu']
 
     # Text (options):
     for r in range(len(text_phrase)):
@@ -96,7 +96,7 @@ def section_4():
     line('=', c.WIDHT + c.EXTRA_FIX, points='o', x=c.EDGE_X)
 
     # Move the cursor:
-    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 35)
+    pos(x=c.EDGE_X + 50, y=c.EDGE_Y + 38)
 
     # Select the option:
     color(f='', b='', s='', ff=False)
@@ -106,7 +106,7 @@ def section_4():
     try:
         option = int(option)
 
-        if not 1 <= option <= 4:
+        if not 1 <= option <= 5:
             raise ValueError
         else:
             # Options:
@@ -134,11 +134,19 @@ def section_4():
 
                 # SFX:
                 play_sfx('Go')
+            
+            elif option == 4:
+                # Variable:
+                c.SECTION = 2
+
+                # SFX:
+                play_sfx('Back')
             else:
                 c.SECTION = 1
 
                 # SFX:
                 play_sfx('Back')
+    
     
     except ValueError:
         # SFX:

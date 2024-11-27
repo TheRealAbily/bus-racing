@@ -24,7 +24,8 @@ def section_5():
     black = (color(b=c.TRACK_LINE_COLOR) + '  ')
     
     # Clear the screen:
-    clear()
+    for w in range(5):
+        clear()
 
     # Edge Y:
     edge(y=c.EDGE_Y)
