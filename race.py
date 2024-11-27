@@ -624,52 +624,53 @@ def section_15(firts_time):
                 if c.RACE_TIME + c.GAME_TICK < c.MAX_RACE_TIME:
                     c.RACE_TIME += c.GAME_TICK
                 else:
-                    c.RACE_TIME = c.MAX_RACE_TIME
-                    stop_adjust = True
-                    
-                    # Spaces deleted:
-                    if spaces_delete < 15:
-                        # Distance:
-                        if (c.DISTANCE_PLAYER_1 - 3) >= 0:
-                            c.DISTANCE_PLAYER_1 -= 3
+                    if track_line_number == 0:
+                        c.RACE_TIME = c.MAX_RACE_TIME
+                        stop_adjust = True
                         
-                        if (c.DISTANCE_PLAYER_2 - 3) >= 0:
-                            c.DISTANCE_PLAYER_2 -= 3
-                        
-                        # Limits:
-                        c.DISTANCE_PLAYER_1 = clamp(c.DISTANCE_PLAYER_1, 0, 74)
-                        c.DISTANCE_PLAYER_2 = clamp(c.DISTANCE_PLAYER_2, 0, 74)
-                        
-                        spaces_delete += 3
-                    else:
-                        stop_animation = True
-                        
-                        # Limits:
-                        c.DISTANCE_PLAYER_1 = clamp(c.DISTANCE_PLAYER_1, 0, 74)
-                        c.DISTANCE_PLAYER_2 = clamp(c.DISTANCE_PLAYER_2, 0, 74)
+                        # Spaces deleted:
+                        if spaces_delete < 15:
+                            # Distance:
+                            if (c.DISTANCE_PLAYER_1 - 3) >= 0:
+                                c.DISTANCE_PLAYER_1 -= 3
+                            
+                            if (c.DISTANCE_PLAYER_2 - 3) >= 0:
+                                c.DISTANCE_PLAYER_2 -= 3
+                            
+                            # Limits:
+                            c.DISTANCE_PLAYER_1 = clamp(c.DISTANCE_PLAYER_1, 0, 74)
+                            c.DISTANCE_PLAYER_2 = clamp(c.DISTANCE_PLAYER_2, 0, 74)
+                            
+                            spaces_delete += 3
+                        else:
+                            stop_animation = True
+                            
+                            # Limits:
+                            c.DISTANCE_PLAYER_1 = clamp(c.DISTANCE_PLAYER_1, 0, 74)
+                            c.DISTANCE_PLAYER_2 = clamp(c.DISTANCE_PLAYER_2, 0, 74)
 
-                        # Stop the race:
-                        if c.DISTANCE_PLAYER_1 == 74 or c.DISTANCE_PLAYER_2 == 74:
-                            stop_move = True
+                            # Stop the race:
+                            if c.DISTANCE_PLAYER_1 == 74 or c.DISTANCE_PLAYER_2 == 74:
+                                stop_move = True
 
-                            if c.DISTANCE_PLAYER_1 == 74:
-                                c.WINNER = 0
-                            else:
-                                c.WINNER = 1
-                        
-                        # Goal:
-                        back_c('B', False)
-                        switch_goal = False
+                                if c.DISTANCE_PLAYER_1 == 74:
+                                    c.WINNER = 0
+                                else:
+                                    c.WINNER = 1
+                            
+                            # Goal:
+                            back_c('B', False)
+                            switch_goal = False
 
-                        for r in range(15):
-                            pos(x=c.EDGE_X + 95, y=c.EDGE_Y + 5 + r)
+                            for r in range(15):
+                                pos(x=c.EDGE_X + 95, y=c.EDGE_Y + 5 + r)
 
-                            if switch_goal == False:
-                                print(front_c('W') + back_c('B') + '|' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
-                                switch_goal = True
-                            else:
-                                print(front_c('W') + back_c('B') + '|' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
-                                switch_goal = False
+                                if switch_goal == False:
+                                    print(front_c('W') + back_c('B') + '|' + back_c('W') + ' ' + back_c('B') + ' ' + back_c('W') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
+                                    switch_goal = True
+                                else:
+                                    print(front_c('W') + back_c('B') + '|' + back_c('B') + ' ' + back_c('W') + ' ' + back_c('B') + ' ' + front_c('W') + back_c('B') + '|', end='', sep='')
+                                    switch_goal = False
 
                 # FPS:
                 if stop_move == False:
